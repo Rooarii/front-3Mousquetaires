@@ -4,6 +4,7 @@ import CategorieList from './components/CategorieList'
 import Navbar from './components/Navbar'
 import CategoryMainPage from './components/CategoryMainPage';
 //import ChatBot from './components/Chatbot'
+import FicheProjet from './components/FicheProjet'
 
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/" component={CategorieList}/>
-        <Route path='/category' component={CategoryMainPage}/>
+        <Route path='/category' component={CategoryMainPage} />
+        <Route path='/project' component={FicheProjet} />
+        {/* <Route path='/formation' component={FicheFormation} /> */}
     </Switch>
     </Router>
   );

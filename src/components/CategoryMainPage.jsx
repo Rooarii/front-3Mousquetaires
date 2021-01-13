@@ -5,6 +5,7 @@ import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const CategoryMainPage = () => {
   return (
@@ -19,7 +20,7 @@ const CategoryMainPage = () => {
           <CardTitle tag="h5">{e.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
           <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-          <Button>Button</Button>
+          <Link to='/project'><Button>Button</Button></Link>
         </CardBody>
       </Card> 
   )
@@ -36,7 +37,7 @@ const CategoryMainPage = () => {
           <CardTitle tag="h5">{e.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
           <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-          <Button>Button</Button>
+          <Link to='/formation'><Button>Button</Button></Link>
         </CardBody>
       </Card> 
   )
