@@ -58,11 +58,11 @@ class SimpleForm extends Component {
   render() {
     return (
       <ChatBot
-        speechSynthesis={{ enable: true, lang: 'en' }}
+        speechSynthesis={{ enable: true, lang: 'fr' }}
         steps={[
           {
             id: '1',
-            message: 'What is your name?',
+            message: "Bonjour, bienvenue chez Artilect Moi c’est Richard, et toi ?",
             trigger: 'name',
           },
           {
@@ -72,13 +72,13 @@ class SimpleForm extends Component {
           },
           {
             id: '3',
-            message: 'Hi {previousValue}! What is your gender?',
+            message: 'Super {previousValue}! Dit moi ton sexe?',
             trigger: 'gender',
           },
           {
             id: 'gender',
             options: [
-              { value: 'male', label: 'Male', trigger: '5' },
+              { value: 'Homme', label: 'Male', trigger: '5' },
               { value: 'female', label: 'Female', trigger: '5' },
             ],
           },
