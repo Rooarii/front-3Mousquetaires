@@ -59,6 +59,7 @@ class SimpleForm extends Component {
     return (
       <ChatBot
         speechSynthesis={{ enable: true, lang: 'fr' }}
+        recognitionEnable={true}
         steps={[
           {
             id: '1',
