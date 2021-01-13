@@ -1,0 +1,16 @@
+{
+    "design":[
+      {"name":"Formation UX/UI"},
+      {"name":"Formation Photoshop"},
+      {"name":"Formation Design graphique"},
+      {"name":"Formation Design de mode"},
+      {"name":"Formation Art & Design"}
+    ],
+    "electronique":[
+      {"name":"Formation Object connecter de A-Z"},
+      {"name":"Formation Micro soudure"},
+      {"name":"Formation Branchement électronique"},
+      {"name":"Formation Gestion/Fabriquation de baterrie"},
+      {"name":"Formation Object Cablage électronique"}
+    ]
+}

@@ -1,0 +1,25 @@
+
+{
+     "decoupe-laser":[
+       {"name":"Trotec Speedy 500"},
+       {"name":"Trotec Speedy 100"},
+       {"name":"Epilog 24/18"}
+     ],
+     "impression-3D":[
+      {"name":"Creality Ender 3x"},
+      { "name":"UP Mini 2 (ABS) #1"},
+      { "name":"UP Mini 2 (ABS) #2"},
+      { "name":"Creality CR-10 S5 (GRANDE TAILLE)"},
+      { "name":"BCN3D Sigma R19 (DOUBLE EXTRUSION)"}
+    ],
+    "Surjetteuse":[
+      {"name":"Sewmaq SW-1333"}
+    ],
+    "machine-a-coudre":[
+      {"name":"ELNA eXplore 220"}
+    ],
+    "cnc":[
+      {"name":" Makko M1070 KU"},
+      {"name":" Maho MH 800 T"}
+    ]
+  }
