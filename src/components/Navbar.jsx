@@ -1,16 +1,18 @@
+import React from 'react';
 
+import userpicture from '../images/userpicture.jpg';
 
-
-const Navbar = () => {
+export default function Navbar() {
   return(
-    <div className="navbar-container">
+    <div className="header-container">
       <div className="picture-profil">
+        <img src={userpicture} alt='userpicture' />
       </div>
-      <h1>Artilect</h1>
+      <div className="artilect-name">
+        <h1>Artilect</h1>
+      </div>
+      <div className="burger-container">
+      </div>
     </div>
-  )
-
+  );
 }
-
-
-export default Navbar;
