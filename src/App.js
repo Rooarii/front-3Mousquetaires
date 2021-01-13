@@ -1,6 +1,7 @@
 import './styles/app.scss'
 import CategorieList from './components/CategorieList'
 //import ChatBot from './components/Chatbot'
+import FicheProjet from './components/FicheProjet'
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         {/* <ChatBot className="chatbot" /> */}
         <CategorieList />
       </header>
+      <FicheProjet />
     </div>
   );
 }
