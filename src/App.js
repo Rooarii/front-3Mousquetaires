@@ -1,11 +1,12 @@
 
-import SimpleForm from './components/Chatbot'
+import ChatBot from './components/Chatbot'
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <SimpleForm></SimpleForm>
+        <ChatBot className="chatbot" />
       </header>
     </div>
   );

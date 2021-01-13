@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
+import { ThemeProvider } from 'styled-components';
+
+const theme = {
+  background: '#f5f8fb',
+  fontFamily: 'Helvetica Neue',
+  headerBgColor: '#EF6C00',
+  headerFontColor: '#fff',
+  headerFontSize: '15px',
+  botBubbleColor: '#E25251',
+  botFontColor: '#fff',
+  userBubbleColor: '#fff',
+  userFontColor: '#4a4a4a',
+};
+
+
 
 class Review extends Component {
   constructor(props) {
@@ -57,111 +72,113 @@ Review.defaultProps = {
 class SimpleForm extends Component {
   render() {
     return (
-      <ChatBot
-        speechSynthesis={{ enable: true, lang: 'fr' }}
-        recognitionEnable={true}
-        steps={[
-          {
-            id: '1',
-            message: "Bonjour, bienvenue chez Artilect Moi c’est Richard, et toi ?",
-            trigger: 'name',
-          },
-          {
-            id: 'name',
-            user: true,
-            trigger: '3',
-          },
-          {
-            id: '3',
-            message: 'Super {previousValue}! Dit moi ton sexe?',
-            trigger: 'gender',
-          },
-          {
-            id: 'gender',
-            options: [
-              { value: 'Homme', label: 'Male', trigger: '5' },
-              { value: 'female', label: 'Female', trigger: '5' },
-            ],
-          },
-          {
-            id: '5',
-            message: 'How old are you?',
-            trigger: 'age',
-          },
-          {
-            id: 'age',
-            user: true,
-            trigger: '7',
-            validator: (value) => {
-              if (isNaN(value)) {
-                return 'value must be a number';
-              } else if (value < 0) {
-                return 'value must be positive';
-              } else if (value > 120) {
-                return `${value}? Come on!`;
-              }
-
-              return true;
+      <ThemeProvider theme={theme}>
+        <ChatBot
+          // speechSynthesis={{ enable: true, lang: 'fr' }}
+          recognitionEnable={true}
+          steps={[
+            {
+              id: '1',
+              message: "Bonjour, bienvenue chez Artilect Moi c’est Richard, et toi ?",
+              trigger: 'name',
             },
-          },
-          {
-            id: '7',
-            message: 'Great! Check out your summary',
-            trigger: 'review',
-          },
-          {
-            id: 'review',
-            component: <Review />,
-            asMessage: true,
-            trigger: 'update',
-          },
-          {
-            id: 'update',
-            message: 'Would you like to update some field?',
-            trigger: 'update-question',
-          },
-          {
-            id: 'update-question',
-            options: [
-              { value: 'yes', label: 'Yes', trigger: 'update-yes' },
-              { value: 'no', label: 'No', trigger: 'end-message' },
-            ],
-          },
-          {
-            id: 'update-yes',
-            message: 'What field would you like to update?',
-            trigger: 'update-fields',
-          },
-          {
-            id: 'update-fields',
-            options: [
-              { value: 'name', label: 'Name', trigger: 'update-name' },
-              { value: 'gender', label: 'Gender', trigger: 'update-gender' },
-              { value: 'age', label: 'Age', trigger: 'update-age' },
-            ],
-          },
-          {
-            id: 'update-name',
-            update: 'name',
-            trigger: '7',
-          },
-          {
-            id: 'update-gender',
-            update: 'gender',
-            trigger: '7',
-          },
-          {
-            id: 'update-age',
-            update: 'age',
-            trigger: '7',
-          },
-          {
-            id: 'end-message',
-            message: 'Thanks! Your data was submitted successfully!',
-            end: true,
-          },
-        ]}
-      />
+            {
+              id: 'name',
+              user: true,
+              trigger: '3',
+            },
+            {
+              id: '3',
+              message: 'Super {previousValue}! Dit moi ton sexe?',
+              trigger: 'gender',
+            },
+            {
+              id: 'gender',
+              options: [
+                { value: 'Homme', label: 'Male', trigger: '5' },
+                { value: 'female', label: 'Female', trigger: '5' },
+              ],
+            },
+            {
+              id: '5',
+              message: 'How old are you?',
+              trigger: 'age',
+            },
+            {
+              id: 'age',
+              user: true,
+              trigger: '7',
+              validator: (value) => {
+                if (isNaN(value)) {
+                  return 'value must be a number';
+                } else if (value < 0) {
+                  return 'value must be positive';
+                } else if (value > 120) {
+                  return `${value}? Come on!`;
+                }
+
+                return true;
+              },
+            },
+            {
+              id: '7',
+              message: 'Great! Check out your summary',
+              trigger: 'review',
+            },
+            {
+              id: 'review',
+              component: <Review />,
+              asMessage: true,
+              trigger: 'update',
+            },
+            {
+              id: 'update',
+              message: 'Would you like to update some field?',
+              trigger: 'update-question',
+            },
+            {
+              id: 'update-question',
+              options: [
+                { value: 'yes', label: 'Yes', trigger: 'update-yes' },
+                { value: 'no', label: 'No', trigger: 'end-message' },
+              ],
+            },
+            {
+              id: 'update-yes',
+              message: 'What field would you like to update?',
+              trigger: 'update-fields',
+            },
+            {
+              id: 'update-fields',
+              options: [
+                { value: 'name', label: 'Name', trigger: 'update-name' },
+                { value: 'gender', label: 'Gender', trigger: 'update-gender' },
+                { value: 'age', label: 'Age', trigger: 'update-age' },
+              ],
+            },
+            {
+              id: 'update-name',
+              update: 'name',
+              trigger: '7',
+            },
+            {
+              id: 'update-gender',
+              update: 'gender',
+              trigger: '7',
+            },
+            {
+              id: 'update-age',
+              update: 'age',
+              trigger: '7',
+            },
+            {
+              id: 'end-message',
+              message: 'Thanks! Your data was submitted successfully!',
+              end: true,
+            },
+          ]}
+        />
+      </ThemeProvider>
     );
   }
 }
