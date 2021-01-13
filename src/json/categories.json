@@ -1,0 +1,15 @@
+{
+  "categories":[
+    {"name":"biologie"},
+    {"name":"electronique"},
+    {"name":"couture"},
+    {"name":"drone"},
+    {"name":"machines"},
+    {"name":"design"},
+    {"name":"musique"},
+    {"name":"robotique"},
+    {"name":"architecture"},
+    {"name":"media"},
+    {"name":"cosplay-lab"}
+  ]
+}
