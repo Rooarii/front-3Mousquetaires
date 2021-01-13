@@ -2,12 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 }
 
 html {
   font-size: 62.5%;
 }
 
+h1{
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 1rem;
+}
+
 //@import "./example"; 
 @import "./example";
-@import "./chatbot"
+@import "./chatbot";
+@import "./categorieList";
+@import "./navbar";
