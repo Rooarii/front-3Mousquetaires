@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap");
 
 .categorie-list-container {
@@ -5,12 +6,14 @@
     padding-top: 1rem;
     font-size: 3.5rem;
     text-align: center;
+
     font-family: "Bungee Shade", cursive;
     color: rgb(97, 97, 97);
     .play {
       border-bottom: 1rem solid rgb(237, 161, 161);
       padding: 1rem 2rem;
       color: rgb(49, 49, 49);
+
     }
   }
   .container-grid {
@@ -132,6 +135,7 @@
   }
 }
 
+
 @-webkit-keyframes swing {
   15% {
     -webkit-transform: translateX(5px);
@@ -158,3 +162,4 @@
     transform: translateX(0);
   }
 }
+

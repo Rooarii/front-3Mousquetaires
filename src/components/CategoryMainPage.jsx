@@ -6,21 +6,21 @@ import { Link } from "react-router-dom";
 
 const CategoryMainPage = () => {
   return (
-    <>
+    <div className="main">
       <div className="header">
-        <h1>Electronique</h1>
-        <img src={formations.electronique[1].img} />
+        <h1>ELECTRONIC</h1>
+        <img alt="electronic" src={formations.electronique[0].img} />
       </div>
 
       <div className="category-main">
-        <h1>Projects :</h1>
-        <div>
+        <h1>PROJECT</h1>
+        <div className="flex-container">
           {projects.projectElectronique.map((e) => {
             return (
-              <Link  to="/project">
-                <div>
-                  <img top width="auto" src={e.img} alt="Card image cap" />
-                  <div>
+              <Link className="link" to="/project">
+                <div className="flex-child">
+                  <img  width="auto" src={e.img} alt="projet" />
+                  <div className="title-container">
                     <h2>{e.name}</h2>
                   </div>
                 </div>
@@ -29,14 +29,14 @@ const CategoryMainPage = () => {
           })}
         </div>
 
-        <h1 >Formations :</h1>
-        <div >
-          {formations.electronique.map((e) => {
+        <h1>FORMATIONS</h1>
+        <div className="flex-container">
+          {formations.electronique.slice(1).map((e) => {
             return (
-              <Link  to="/project">
-                <div >
-                  <img top width="auto" src={e.img} alt="Card image cap" />
-                  <div>
+              <Link className="link" to="/project">
+                <div className="flex-child" >
+                  <img top width="auto" src={e.img} alt="electronic" />
+                  <div className="title-container">
                     <h2>{e.name}</h2>
                   </div>
                 </div>
@@ -45,7 +45,7 @@ const CategoryMainPage = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,10 +1,13 @@
 //import react from "react";
 import data from "../json/categories.json";
+
 import { Link } from 'react-router-dom';
 
+
 const CategorieList = () => {
-  return(
+  return (
     <div className="categorie-list-container">
+
       <h1>Let's <span className='play'>Play</span></h1>
       <div className="container-grid">
 
@@ -28,5 +31,6 @@ const CategorieList = () => {
 
 }
 
+           
 
 export default CategorieList;

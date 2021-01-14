@@ -1,91 +1,107 @@
+
+.main{
+  width: 100%;
+}
+
+
 .header {
   display: flex;
-  padding-right: 20rem;
   justify-content: center;
   align-items:center;
   flex-wrap: wrap;
+  padding-top: 4rem;
 
   h1{
     font-size: 10rem;
-    padding: 0;
-  margin-right:20%;
+    padding: 0 2rem 0 0;
   margin-top: 0%;
   background: white;
+  border-radius: 0px 10px 10px 0px;
+  
+  position: relative;
+  right: -15rem;
+  font-family: "Bungee Shade", cursive;
   }
 
   img{
+    width: 25%;
     border-radius: 50%;
+    
+  }
+
+  @media (max-width: 1000px) {
+    img {
+        display: none;
+        }
+    h1{
+      font-size: 7rem;
+      position: static;
+    }
   }
 }
 
 
+
+
 .category-main{
+
+  padding-bottom: 15rem;
 
   h1{
 
   font-size: 5rem;
+  text-align: left;
+  margin-left: 10%;
+  font-weight: bold;
+  padding:3rem 0 3rem 0;
+  
+  }
+
+  h2{
+    
+    width: auto;
+    height: 10rem;
+    font-size : 3rem;
+    font-family: "Bungee Shade", cursive;
+    text-align: right;
+    transition: all .2s ease-in-out;
+  }
+  h2:hover{
+    
+    transform: scale(1.1);
+  }
+
+  .title-container{
+    background-color: #F7EFEF;
+    padding-bottom: 1rem;
+    text-align: center;
   }
 
   img{
     width: 25rem;
     height: auto;
   }
-}
 
+  .flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding-left: 3rem;
+    padding-right: 5rem;
+  }
 
-/* 
-.card-wrap {
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-}
+  .flex-child{
+    padding: 0px 40px 0px 40px;
+    text-align: center;
+  }
 
-.card-body.card {
-  padding: 0;
-  border: none;
-}
-.card-body {
+  .link{
+    text-decoration: none;
+    color: gray;
+  }
   
-  margin: 0;
-  height: 100%;
-  width: auto;
-  background:#F7EFEF;
-  border-radius: 0px 0px 10px 10px;
-  overflow:hidden;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-}
-.card-title {
-  font-size: large;
-  text-decoration: none;
 
 }
 
-.link {
-  padding: 5px;
-  border-radius: 10px;
-  text-decoration: none;
-}
-a.link {
-  text-decoration: none;
-}
-
-.card-img {
-  width: auto;
-  height: 50em;
-}
-img.card-img-top {
-  width: auto;
-  height: 40em;
-}
-.card-img-bottom {
-  width: auto;
-}
-.category-title {
-  font-size: 5em;
-  text-align: left;
-} */

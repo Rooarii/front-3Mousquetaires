@@ -4,16 +4,17 @@ import CategorieList from './components/CategorieList'
 import Navbar from './components/Navbar'
 import CategoryMainPage from './components/CategoryMainPage';
 import ChatBot from './components/Chatbot'
-import FicheProjet from './components/FicheProjet'
-
+import Calendar from './components/Calendar';
+import Formation from './components/Formation'
 
 function App() {
+
   return (
     <Router>
       <div className="App">
         <header className="App-header">
           <Navbar />
-          {/* <Link to="/"><h1>Home</h1></Link> */}
+          {/* <Link to="/">Home</Link> */}
         </header>
           <div className="sticky">
             {/* <ChatBot className="chatbot" /> */}
@@ -22,8 +23,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={CategorieList}/>
         <Route path='/category' component={CategoryMainPage} />
-        <Route path='/project' component={FicheProjet} />
+        <Route path='/project' component={Formation} />
         {/* <Route path='/formation' component={FicheFormation} /> */}
+        <Route path='/calendar' component={Calendar} />
     </Switch>
     </Router>
   );
