@@ -1,171 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap");
+
 .categorie-list-container {
   h1 {
     padding-top: 1rem;
-    font-size: 5rem;
+    font-size: 3.5rem;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
-    @media screen and (min-width: 1000px) {
-      font-size: 10rem;
-    }
+    font-family: "Bungee Shade", cursive;
+    color: rgb(97, 97, 97);
     .play {
-      background: rgb(237, 161, 161);
-      color: white;
+      border-bottom: 1rem solid rgb(237, 161, 161);
       padding: 1rem 2rem;
-      border-radius: 1rem;
+      color: rgb(49, 49, 49);
     }
   }
-
-  h3 {
-    font-size: 5rem;
-    @media screen and (max-width: 600px) {
-      font-size: 3rem;
-    }
-    @media screen and (min-width: 1000px) {
-      font-size: 8rem;
-    }
-    @media screen and (min-width: 700px) {
-      font-size: 6rem;
-    }
-  }
-
-  .parent:hover {
-    -webkit-animation: swing 0.5s ease-in;
-    animation: swing 0.5s ease-in;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+  .container-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
   }
 
   .main-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 33.333333%;
-    padding-right: 20%;
-    padding-left: 20%;
-    padding-bottom: 10rem;
-
-    @media screen and (min-width: 1000px) {
-      flex-wrap: wrap;
-      padding-right: 20%;
-      padding-left: 20%;
-      margin: auto;
-      justify-content: center;
-    }
-    @media screen and (max-width: 1200px) {
-      flex-wrap: wrap;
-      padding-right: 15%;
-      padding-left: 15%;
-      margin: auto;
-      justify-content: center;
-    }
-
-    @media screen and (max-width: 700px) {
-      flex-wrap: wrap;
-      padding-right: 5%;
-      padding-left: 5%;
-      margin: auto;
-      justify-content: center;
-    }
-
-    @media screen and (max-width: 500px) {
-      flex-wrap: wrap;
-      padding-right: 0%;
-      padding-left: 0%;
-      margin: auto;
-      justify-content: center;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    margin: 4rem;
+  }
+  .container {
+    width: min-content;
+    text-align: center;
+    margin: 0rem;
+    padding: 0rem;
+    place-self: center;
+    h2 {
+      color: #c7c7c7;
+      font-size: 1.2rem;
     }
   }
-
   .parent {
     background: #f7efef;
-    padding: 1rem;
-    margin: 2rem;
-    margin-top: 3rem;
-    width: 10rem;
-    height: 10rem;
+    margin: 1rem;
+    margin-top: 2rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    @media screen and (min-width: 500px) {
-      width: 5rem;
-      height: 5rem;
-      margin-top: 15rem;
+    &:hover {
+      -webkit-animation: swing 0.5s ease-in;
+      animation: swing 0.5s ease-in;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
     }
-
-    @media screen and (max-width: 600px) {
-      width: 5rem;
-      height: 5rem;
-      margin-top: 15rem;
+    h3 {
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: Montserrat, sans-serif;
     }
-    @media screen and (min-width: 1000px) {
-      width: 15rem;
-      height: 15rem;
-      margin-top: 6rem;
-    }
-
-    @media screen and (min-width: 2250px) {
-      width: 40rem;
-      height: 40rem;
-      margin-top: 15rem;
-    }
-
-    @media screen and (max-width: 1450px) {
-      width: 20rem;
-      height: 20rem;
-      margin-top: 15rem;
-    }
-    @media screen and (max-width: 1200px) {
-      width: 18rem;
-      height: 18rem;
-      margin-top: 15rem;
-    }
-    @media screen and (max-width: 1000px) {
-      width: 15rem;
-      height: 15rem;
-      margin-top: 15rem;
-    }
-    @media screen and (max-width: 900px) {
-      width: 13rem;
-      height: 13rem;
-      margin-top: 15rem;
-    }
-    @media screen and (max-width: 750px) {
-      width: 12rem;
-      height: 12rem;
-      margin-top: 15rem;
-    }
-    @media screen and (max-width: 600px) {
-      width: 10rem;
-      height: 10rem;
-      margin-top: 15rem;
+  }
+  .scroll-indication {
+    i {
+      font-size: 5rem;
+      color: rgba(237, 161, 161, 0.4);
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      display: none;
     }
   }
 
-  .container {
-    width: min-content;
-    text-align: center;
-    h2 {
-      color: gray;
+  // Media Query
+  @media screen and(min-width: 650px) {
+    .categorie-list-container {
+      h1 {
+        font-size: 8rem;
+        display: none;
+      }
+    }
+    .main-container {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 3rem;
+      grid-row-gap: 3rem;
+      margin: 5rem 50rem;
+    }
+    .parent {
+      width: 15rem;
+      height: 15rem;
+      h3 {
+        font-size: 5rem;
+      }
     }
   }
 }
 
-.scroll-indication {
-  i {
-    font-size: 5rem;
-    color: rgba(237, 161, 161, 0.4);
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
+@media screen and(min-width: 1000px) {
+  .categorie-list-container {
+    h1 {
+      font-size: 7rem;
+    }
   }
 }
 
 // Animation
-
-@-webkit-keyframes swing {
+@keyframes swing {
   15% {
     -webkit-transform: translateX(5px);
     transform: translateX(5px);
@@ -191,7 +131,8 @@
     transform: translateX(0);
   }
 }
-@keyframes swing {
+
+@-webkit-keyframes swing {
   15% {
     -webkit-transform: translateX(5px);
     transform: translateX(5px);

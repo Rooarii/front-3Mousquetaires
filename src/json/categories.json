@@ -1,28 +1,41 @@
 {
   "categories": [
     {
+      "name":"architecture",
+      "color":"#FACC54"
+    },
+    {
       "name":"biologie",
       "color":"#EE8484"
     },
     {
-      "name":"electronique",
-      "color":"#E9E007"
+      "name":"cosplay-lab",
+      "color":"#88B700"
     },
     {
       "name":"couture",
       "color":"#2FC1FF"
     },
     {
+      "name":"design",
+      "color":"#F7BC91"
+    },
+    {
       "name":"drone",
       "color":"#9ADE43"
     },
+    {
+      "name":"electronique",
+      "color":"#E9E007"
+    },
+
     {
       "name":"machines",
       "color":"#C993D2"
     },
     {
-      "name":"design",
-      "color":"#F7BC91"
+      "name":"media",
+      "color":"#546FFA"
     },
     {
       "name":"musique",
@@ -31,18 +44,6 @@
     {
       "name":"robotique",
       "color":"#EC4343"
-    },
-    {
-      "name":"architecture",
-      "color":"#FACC54"
-    },
-    {
-      "name":"media",
-      "color":"#546FFA"
-    },
-    {
-      "name":"cosplay-lab",
-      "color":"#88B700"
     }
   ]
 }
