@@ -24,22 +24,23 @@ const Formation = () => {
         </div>
       </div>
       <div className="team-container">
-        <h2>L'ÉQUIPE</h2>
+        <h2>PRÉREQUIS</h2>
         <div className="flex">
           <div className="child-flex">
             <p>
-             Dans la team, que des écolos ! 
-             Bien sur, c'est le futur ! 
-             Elon Musk n'est pas arrivé là où il est par hasard. 
-             Et ouais ! 
-             Alors si tu aussi tu veux devenir riche (de connaissances), alors rejoint nous 😏
+            <ul>
+              <li>Connaître les types de courants.</li>
+              <li>Ne pas travailler chez EDF!</li>
+              <li>Avoir les C.A.C.E.S lithium.</li>
+              <li>Être prêt à recevoir des conseils et d'en donner</li>
+            </ul>
             </p>
           </div>
         </div>
       </div>
       <div className="button" >
         <button className="big-button" type="button">
-          JOIN US
+          ACHETER
         </button>
       </div>
     </div>

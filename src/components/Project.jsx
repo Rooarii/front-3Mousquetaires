@@ -37,7 +37,7 @@ const Project = () => {
       </div>
       <div className="button-project" >
         <button className="big-button-project" type="button">
-          JOIN US
+          REJOINDRE
         </button>
       </div>
     </div>
