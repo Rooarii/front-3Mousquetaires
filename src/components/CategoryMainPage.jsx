@@ -5,6 +5,7 @@ import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
+import { Toast, ToastBody, ToastHeader } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const CategoryMainPage = () => {
