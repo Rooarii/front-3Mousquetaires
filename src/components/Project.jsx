@@ -15,7 +15,7 @@ const Project = () => {
         <img alt="electronic" src={data.projectElectronique[1].img} />
       </div>
       <div className="description-container-project">
-        <h2>Description</h2>
+        <h2>DESCRIPTION</h2>
         <div className="flex-project">
           <div>
             <p>
@@ -26,7 +26,7 @@ const Project = () => {
         </div>
       </div>
       <div className="team-container-project">
-        <h2>Team</h2>
+        <h2>L'ÉQUIPE</h2>
         <div className="flex-project">
           <div className="child-flex-project">
             <p>

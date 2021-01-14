@@ -12,7 +12,7 @@ const Formation = () => {
         <img alt="electronic" src={formations.electronique[4].img} />
       </div>
       <div className="description-container">
-        <h2>Description</h2>
+        <h2>DESCRIPTION</h2>
         <div className="flex">
           <div>
             <p>
@@ -24,7 +24,7 @@ const Formation = () => {
         </div>
       </div>
       <div className="team-container">
-        <h2>Team</h2>
+        <h2>L'ÉQUIPE</h2>
         <div className="flex">
           <div className="child-flex">
             <p>
