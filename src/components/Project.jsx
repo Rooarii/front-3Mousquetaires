@@ -20,7 +20,7 @@ const Project = () => {
           <div>
             <p>
               Faire le ménage ? Non ! À manger ? Non Plus !
-              Avoir un robot qui fait ce que vous n'avez pas envie de faire c'est la vie ! T'es pas prêt ! 
+              Avoir un robot qui fait ce que vous n'avez pas envie de faire c'est la vie ! Tu n'es pas prêt ! 
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ const Project = () => {
         <div className="flex">
           <div className="child-flex">
             <p>
-             Nous c'est les flemmards ! T'aimes pas faire ci, par faire ça ! Nous non plus ! Mais on est pas bête. On construit des robots qui nous assiste. Ils parlent pas beaucoup mais on les aimes bien !   
+             Nous c'est les flemmards ! Tu n'aimes pas faire si, pas faire ça ! Nous non plus ! Mais on n'est pas bête. On construit des robots qui nous assistent. Ils ne parlent pas beaucoup mais ont les aimes bien !   
             </p>
           </div>
         </div>
