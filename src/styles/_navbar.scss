@@ -55,6 +55,13 @@
       align-items: center;
       margin-bottom: 1rem;
       margin-left: 1rem;
+      &:hover {
+        color: rgb(237, 161, 161);
+        &:visited {
+          fill: rgb(237, 161, 161);
+          color: rgb(237, 161, 161);
+        }
+      }
     }
   }
 
