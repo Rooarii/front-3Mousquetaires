@@ -115,7 +115,7 @@ class SimpleForm extends Component {
     return (
       <ThemeProvider theme={theme}>
         <ChatBot
-          speechSynthesis={{ enable: true, lang: 'fr' }}
+          // speechSynthesis={{ enable: true, lang: 'fr' }}
           recognitionEnable={true}
           steps={[
             {
