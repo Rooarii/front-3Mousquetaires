@@ -5,6 +5,8 @@ import Navbar from './components/Navbar'
 import CategoryMainPage from './components/CategoryMainPage';
 import ChatBot from './components/Chatbot'
 import FicheProjet from './components/FicheProjet'
+import Calendar from './components/Calendar';
+import Modal  from './components/Modal';
 
 
 function App() {
@@ -17,13 +19,16 @@ function App() {
         </header>
           <div className="sticky">
             {/* <ChatBot className="chatbot" /> */}
-          </div>    
+        </div> 
+        <Calendar />
+        <Modal />
       </div>
       <Switch>
         <Route exact path="/" component={CategorieList}/>
         <Route path='/category' component={CategoryMainPage} />
         <Route path='/project' component={FicheProjet} />
         {/* <Route path='/formation' component={FicheFormation} /> */}
+        <Route path='/modal' component={Modal} />
     </Switch>
     </Router>
   );
