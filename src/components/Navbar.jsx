@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import userpicture from '../images/userpicture.jpg';
 import artilectlogo from '../images/artilectlogo.png'
 
@@ -12,7 +12,7 @@ export default function Navbar() {
       </div>
       <div className="profil">
         <button type='button'>Tutoriels</button>
-        <i class="far fa-calendar-plus"></i>
+        <Link to='/calendar' ><i class="far fa-calendar-plus"></i></Link>
         <i class="far fa-bell"></i>
         <img src={userpicture} alt='userpicture' />
       </div>

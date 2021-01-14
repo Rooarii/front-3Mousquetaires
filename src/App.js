@@ -20,15 +20,13 @@ function App() {
           <div className="sticky">
             {/* <ChatBot className="chatbot" /> */}
         </div> 
-        <Calendar />
-        <Modal />
       </div>
       <Switch>
         <Route exact path="/" component={CategorieList}/>
         <Route path='/category' component={CategoryMainPage} />
         <Route path='/project' component={FicheProjet} />
         {/* <Route path='/formation' component={FicheFormation} /> */}
-        <Route path='/modal' component={Modal} />
+        <Route path='/calendar' component={Calendar} />
     </Switch>
     </Router>
   );
