@@ -22,7 +22,9 @@ export default function Navbar() {
         </div>
         <div className="profil">
           <button type='button'>Tutoriels</button>
-          <i class="far fa-calendar-plus" />
+          <Link to='/calendar'>
+            <i class="far fa-calendar-plus" />
+          </Link>
           <i class="far fa-bell" onClick={() => setOpen(!open)} />
           <img src={userpicture} alt='userpicture' />
         </div>

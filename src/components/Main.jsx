@@ -1,12 +1,14 @@
 //import react from "react";
 import data from "../json/categories.json";
+
 import { Link } from 'react-router-dom';
 
-import ChatbotContainer from './ChatbotContainer'
+import ChatBot from './Chatbot'
 
-const CategorieList = () => {
+const Main = () => {
   return (
     <div className="categorie-list-container">
+
       <h1>Let's <span className='play'>Play</span></h1>
       <div className="container-grid">
         <div className="main-container">
@@ -20,7 +22,9 @@ const CategorieList = () => {
               </div>
             ))}
         </div>
-            <ChatbotContainer />
+        <div className="chatbot-container">
+            <ChatBot />
+        </div>
       </div>
       <div className="scroll-indication">
         <i class="fas fa-angle-double-down" />
@@ -30,5 +34,5 @@ const CategorieList = () => {
 
 }
 
-
-export default CategorieList;
+          
+export default Main;
