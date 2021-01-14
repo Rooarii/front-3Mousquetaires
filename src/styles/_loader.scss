@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+.loader-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(237, 161, 161);
+  background: #f7efef;
+  .loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .loader-logo {
+      width: 30%;
+      height: 50%;
+    }
+    h1 {
+      font-size: 4rem;
+      margin-top: 2rem;
+      font-family: "Bungee", cursive;
+      color: #e35251;
+    }
+  }
+}

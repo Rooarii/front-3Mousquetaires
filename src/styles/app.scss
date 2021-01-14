@@ -2,21 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
 }
 
 html {
   font-size: 62.5%;
 }
 
-h1{
+h1 {
   text-align: center;
   font-size: 3rem;
   padding-top: 1rem;
 }
 
-
-.sticky{
+.sticky {
   position: -webkit-sticky;
   position: fixed;
   bottom: 7vh;
@@ -28,22 +27,23 @@ h1{
     width: 90vw;
     right: 0vw;
     position: relative;
-  };
+  }
 
   // css to refacto
   @media screen and (min-width: 770px) and (max-width: 900px) {
     position: -webkit-sticky;
-  position: fixed;
-  bottom: 0.5vh;
-  right: 2vw;
-  z-index: 1;
-  };
+    position: fixed;
+    bottom: 0.5vh;
+    right: 2vw;
+    z-index: 1;
+  }
 }
 
-//@import "./example"; 
+//@import "./example";
 @import "./example";
 @import "./chatbot";
 @import "./categorieList";
 @import "./navbar";
 @import "./categoryMainPage";
-@import "./ficheprojet"
+@import "./ficheprojet";
+@import "./loader";
