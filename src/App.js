@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        <header value="Access-Control-Allow-Origin" className="App-header">
           <Navbar />
           <Link to="/"><h1>Home</h1></Link>
         </header>

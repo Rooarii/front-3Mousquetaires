@@ -13,12 +13,15 @@ const Chat = ({ location }) => {
     const { name, room} = queryString.parse(location.search)
     // console.log(location);
     // console.log(name, room)
-    socket = io(ENDPOINT)
+    socket = io(ENDPOINT, {transports: ['websocket']}
+    )
 
     setName(name);
     setRoom(room);
     console.log(socket)
-  },[])
+
+    socket.emit('join', {name, room})
+  },[ENDPOINT, location.search])
   return (
     <Fragment>
        <h1>Chat</h1>
