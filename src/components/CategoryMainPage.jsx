@@ -1,53 +1,52 @@
-import formations from '../json/formations.json';
-import projects from '../json/projects.json';
-import React from 'react';
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
-import { Toast, ToastBody, ToastHeader } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import formations from "../json/formations.json";
+import projects from "../json/projects.json";
+import React from "react";
+
+import { Link } from "react-router-dom";
 
 const CategoryMainPage = () => {
   return (
     <>
       <div className="header">
-        <h1 className="title-header">Electronique</h1>
-        <img className="img-header" src={formations.electronique[1].img }/>
+        <h1>Electronique</h1>
+        <img src={formations.electronique[1].img} />
       </div>
-      <h1 className="category-title ">Projects :</h1>
-      <div className="card-wrap">
-      {projects.projectElectronique.map(e => {
-  return (
-    <Link className="link" to='/project'>
-      <Card className="card-body">
-        <CardImg top  width="auto" src={e.img} alt="Card image cap" />
-        <CardBody>
-          <CardTitle tag="h5">{e.name}</CardTitle>
-        </CardBody>
-      </Card> 
-      </Link>
-  )
-})}
-      </div>
-      
-      <h1 className="category-title ">Formations :</h1>
-      <div className="card-wrap">
-      {formations.electronique.map(e => {
-        return (
-          <Link className="link" to='/project'>
-      <Card className="card-body">
-        <CardImg top width="auto" src={e.img} alt="Card image cap" />
-        <CardBody>
-          <CardTitle tag="h5">{e.name}</CardTitle>
-        </CardBody>
-            </Card> 
-            </Link>
-  )
-})}
+
+      <div className="category-main">
+        <h1>Projects :</h1>
+        <div>
+          {projects.projectElectronique.map((e) => {
+            return (
+              <Link  to="/project">
+                <div>
+                  <img top width="auto" src={e.img} alt="Card image cap" />
+                  <div>
+                    <h2>{e.name}</h2>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        <h1 >Formations :</h1>
+        <div >
+          {formations.electronique.map((e) => {
+            return (
+              <Link  to="/project">
+                <div >
+                  <img top width="auto" src={e.img} alt="Card image cap" />
+                  <div>
+                    <h2>{e.name}</h2>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default CategoryMainPage;
