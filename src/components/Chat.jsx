@@ -7,6 +7,8 @@ let socket;
 const Chat = ({ location }) => {
   const [name, setName] = useState('');
   const [room,  setRoom] = useState('');
+  const [message,  setMessage] = useState('');
+  const [messages,  setMessages] = useState([]);
   const ENDPOINT = 'localhost:5000'
 
   useEffect(()=>{
@@ -31,9 +33,35 @@ const Chat = ({ location }) => {
       socket.off();
     }
 
-  },[ENDPOINT, location.search])
+  },[ENDPOINT, location.search]);
+
+  useEffect(()=>{
+    socket.on('message', (message) =>{
+      setMessages([...messages, message]);
+    })
+  }, [messages]);
+
+  //function for sending messages
+
+  const sendMessage = (event)=>{
+    if (message){
+      socket.emit('sendMessage', message, ()=> setMessage(''));
+    }
+  }
+
+  console.log(message, messages)
+
   return (
     <Fragment>
+      <div className="outerContainer">
+        <div className="container">
+          <input 
+            value={message}
+            onChange={(event)=> setMessage(event.target.value)}
+            onKeyPress={event => event.key ==='Enter' ? sendMessage(event): null}
+          />
+        </div>
+      </div>
        <h1>Chat</h1>
       <p>{`Hello ${name}, welcome to the ${room} room`}</p>
     </Fragment>
