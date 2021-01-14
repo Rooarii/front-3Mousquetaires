@@ -13,7 +13,7 @@ const theme = {
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
-  height: '80vh',
+  paddingLeft: '35%',
 };
 
 
@@ -115,7 +115,7 @@ class SimpleForm extends Component {
     return (
       <ThemeProvider theme={theme}>
         <ChatBot
-          // speechSynthesis={{ enable: true, lang: 'fr' }}
+          speechSynthesis={{ enable: true, lang: 'fr' }}
           recognitionEnable={true}
           steps={[
             {
@@ -199,10 +199,24 @@ class SimpleForm extends Component {
             {
               id: 'update-question',
               options: [
+                { value: 'Oui', label: 'Oui', trigger: 'validate' },
+                { value: 'Non', label: 'Non', trigger: 'update-yes' },
+              ],
+            },
+
+            {
+              id: 'end',
+              message: 'Ready?',
+              trigger: 'ready',
+            },
+            {
+              id: 'ready',
+              options: [
                 { value: 'Oui', label: 'Oui', trigger: 'end-message' },
                 { value: 'Non', label: 'Non', trigger: 'update-yes' },
               ],
             },
+
             {
               id: 'update-yes',
               message: 'Que veux tu modifier?',
@@ -232,10 +246,15 @@ class SimpleForm extends Component {
               trigger: '7',
             },
             {
-              id: 'end-message',
+              id: 'validate',
               component: <End />,
               asMessage: true,
-              end: true
+              triger: 'update',
+            },
+            {
+              id: 'end-message',
+              message: 'Thanks! Your data was submitted successfully!',
+             
             },
           ]}
        
