@@ -9,7 +9,7 @@ const CategoryMainPage = () => {
     <>
       <div className="header">
         <h1>Electronique</h1>
-        <img src={formations.electronique[1].img} />
+        <img alt="electronic" src={formations.electronique[1].img} />
       </div>
 
       <div className="category-main">
@@ -19,7 +19,7 @@ const CategoryMainPage = () => {
             return (
               <Link  to="/project">
                 <div>
-                  <img top width="auto" src={e.img} alt="Card image cap" />
+                  <img  width="auto" src={e.img} alt="projet" />
                   <div>
                     <h2>{e.name}</h2>
                   </div>
@@ -35,7 +35,7 @@ const CategoryMainPage = () => {
             return (
               <Link  to="/project">
                 <div >
-                  <img top width="auto" src={e.img} alt="Card image cap" />
+                  <img top width="auto" src={e.img} alt="electronic" />
                   <div>
                     <h2>{e.name}</h2>
                   </div>
