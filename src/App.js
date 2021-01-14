@@ -1,10 +1,10 @@
 import './styles/app.scss';
-import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CategorieList from './components/CategorieList'
 import Navbar from './components/Navbar'
 import CategoryMainPage from './components/CategoryMainPage';
 import ChatBot from './components/Chatbot'
-import FicheProjet from './components/FicheProjet'
+import Formation from './components/Formation'
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={CategorieList}/>
         <Route path='/category' component={CategoryMainPage} />
-        <Route path='/project' component={FicheProjet} />
+        <Route path='/project' component={Formation} />
         {/* <Route path='/formation' component={FicheFormation} /> */}
     </Switch>
     </Router>
