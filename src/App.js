@@ -13,7 +13,6 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Navbar />
-          <Link to="/"><h1>Home</h1></Link>
         </header>
           <div className="sticky">
              {/* <ChatBot className="chatbot" />  */}
