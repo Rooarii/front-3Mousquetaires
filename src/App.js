@@ -7,8 +7,10 @@ import Category from './components/Category';
 import Loader from './components/Loader';
 import Formation from './components/Formation';
 import Calendar from './components/Calendar';
+import Project from './components/Project';
 
 import './styles/app.scss';
+
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -34,7 +36,8 @@ export default function App() {
         <Switch>
         <Route exact path="/" component={Main}/>
         <Route path='/category' component={Category} />
-        <Route path='/project' component={Formation} />
+        <Route path='/project' component={Project} />
+        <Route path='/formation' component={Formation} />
         <Route path='/calendar' component={Calendar} />
     </Switch>
       </Router>
