@@ -6,13 +6,14 @@ import { ThemeProvider } from 'styled-components';
 const theme = {
   background: '#f5f8fb',
   fontFamily: 'Helvetica Neue',
-  headerBgColor: '#EF6C00',
+  headerBgColor: '#6E48AA',
   headerFontColor: '#fff',
   headerFontSize: '15px',
-  botBubbleColor: '#E25251',
+  botBubbleColor: '#6E48AA',
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
+  paddingLeft: '35%',
 };
 
 
@@ -23,23 +24,23 @@ class Review extends Component {
 
     this.state = {
       name: '',
-      gender: '',
+      interest: '',
       age: '',
     };
   }
 
   componentWillMount() {
     const { steps } = this.props;
-    const { name, gender, age } = steps;
+    const { name, interest, interestChoice} = steps;
 
-    this.setState({ name, gender, age });
+    this.setState({ name, interest, interestChoice });
   }
 
   render() {
-    const { name, gender, age } = this.state;
+    const { name, interest, interestChoice } = this.state;
     return (
       <div style={{ width: '100%' }}>
-        <h3>Summary</h3>
+        <h3>Résumé</h3>
         <table>
           <tbody>
             <tr>
@@ -47,12 +48,12 @@ class Review extends Component {
               <td>{name.value}</td>
             </tr>
             <tr>
-              <td>Gender</td>
-              <td>{gender.value}</td>
+              <td>Centres d'intérêts</td>
+              <td>{interestChoice.value}</td>
             </tr>
             <tr>
-              <td>Age</td>
-              <td>{age.value}</td>
+              <td>Tu veux</td>
+              <td>{interest.value}</td>
             </tr>
           </tbody>
         </table>
@@ -69,12 +70,52 @@ Review.defaultProps = {
   steps: undefined,
 };
 
+// end summary
+class End extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: '',
+      interest: '',
+      age: '',
+    };
+  }
+
+  componentWillMount() {
+    const { steps } = this.props;
+    const { name, interest, age, interestChoice} = steps;
+
+    this.setState({ name, interest, age, interestChoice });
+  }
+
+  render() {
+    const { name, interestChoice } = this.state;
+    return (
+      <div style={{ width: '100%' }}>
+        <p>{`Bien joué ${name.value}!`}</p>
+        <p>{`Clique sur le centre d'intérêt ${interestChoice.value}`}</p>
+        <p>A bientôt ma gueule !</p>
+      </div>
+    );
+  }
+}
+
+End.propTypes = {
+  steps: PropTypes.object,
+};
+
+End.defaultProps = {
+  steps: undefined,
+};
+
 class SimpleForm extends Component {
   render() {
+    
     return (
       <ThemeProvider theme={theme}>
         <ChatBot
-          // speechSynthesis={{ enable: true, lang: 'fr' }}
+          speechSynthesis={{ enable: true, lang: 'fr' }}
           recognitionEnable={true}
           steps={[
             {
@@ -89,40 +130,59 @@ class SimpleForm extends Component {
             },
             {
               id: '3',
-              message: 'Super {previousValue}! Dit moi ton sexe?',
-              trigger: 'gender',
+              message: `Super {previousValue}! commençons!
+              Tu es plutôt intéréssé par:`,
+              trigger: 'interest',
             },
             {
-              id: 'gender',
+              id: 'interest',
               options: [
-                { value: 'Homme', label: 'Male', trigger: '5' },
-                { value: 'female', label: 'Female', trigger: '5' },
+                { value: 'Apprendre de nouvelles choses', label: 'Apprendre de nouvelles choses', trigger: '5' },
+                { value: 'Rejoindre un projet', label: 'Rejoindre un projet', trigger: '5' },
+                { value: 'Réserver une machine', label: 'Réserver une machine', trigger: '5' },
               ],
             },
             {
               id: '5',
-              message: 'How old are you?',
-              trigger: 'age',
+              message: `Dis moi tout! Quels sont tes centres d'intérêts?`,
+              trigger: 'interestChoice',
             },
             {
-              id: 'age',
-              user: true,
-              trigger: '7',
-              validator: (value) => {
-                if (isNaN(value)) {
-                  return 'value must be a number';
-                } else if (value < 0) {
-                  return 'value must be positive';
-                } else if (value > 120) {
-                  return `${value}? Come on!`;
-                }
-
-                return true;
-              },
+              id: 'interestChoice',
+              options: [
+                { value: 'Biologie', label: 'Biologie', trigger: '7' },
+                { value: 'Electronique', label: 'Electronique', trigger: '7' },
+                { value: 'Couture', label: 'Couture', trigger: '7' },
+                { value: 'Drone', label: 'Drone', trigger: '7' },
+                { value: 'Machines', label: 'Machines', trigger: '7' },
+                { value: 'Design', label: 'Design', trigger: '7' },
+                { value: 'Musique', label: 'Musique', trigger: '7' },
+                { value: 'Robotique', label: 'Robotique', trigger: '7' },
+                { value: 'Architecture', label: 'Design', trigger: '7' },
+                { value: 'Média', label: 'Média', trigger: '7' },
+              ],
+              trigger:'7',
+             
             },
+            // {
+            //   id: 'age',
+            //   user: true,
+            //   trigger: '7',
+            //   validator: (value) => {
+            //     if (isNaN(value)) {
+            //       return 'value must be a number';
+            //     } else if (value < 0) {
+            //       return 'value must be positive';
+            //     } else if (value > 120) {
+            //       return `${value}? Come on!`;
+            //     }
+
+            //     return true;
+            //   },
+            // },
             {
               id: '7',
-              message: 'Great! Check out your summary',
+              message: 'Super! Voici tes réponses',
               trigger: 'review',
             },
             {
@@ -133,26 +193,40 @@ class SimpleForm extends Component {
             },
             {
               id: 'update',
-              message: 'Would you like to update some field?',
+              message: 'Tout est ok?',
               trigger: 'update-question',
             },
             {
               id: 'update-question',
               options: [
-                { value: 'yes', label: 'Yes', trigger: 'update-yes' },
-                { value: 'no', label: 'No', trigger: 'end-message' },
+                { value: 'Oui', label: 'Oui', trigger: 'validate' },
+                { value: 'Non', label: 'Non', trigger: 'update-yes' },
               ],
             },
+
+            {
+              id: 'end',
+              message: 'Ready?',
+              trigger: 'ready',
+            },
+            {
+              id: 'ready',
+              options: [
+                { value: 'Oui', label: 'Oui', trigger: 'end-message' },
+                { value: 'Non', label: 'Non', trigger: 'update-yes' },
+              ],
+            },
+
             {
               id: 'update-yes',
-              message: 'What field would you like to update?',
+              message: 'Que veux tu modifier?',
               trigger: 'update-fields',
             },
             {
               id: 'update-fields',
               options: [
-                { value: 'name', label: 'Name', trigger: 'update-name' },
-                { value: 'gender', label: 'Gender', trigger: 'update-gender' },
+                { value: 'name', label: 'Prénom', trigger: 'update-name' },
+                { value: 'Tu veux', label: 'Tu veux', trigger: 'update-interest' },
                 { value: 'age', label: 'Age', trigger: 'update-age' },
               ],
             },
@@ -162,8 +236,8 @@ class SimpleForm extends Component {
               trigger: '7',
             },
             {
-              id: 'update-gender',
-              update: 'gender',
+              id: 'update-interest',
+              update: 'interest',
               trigger: '7',
             },
             {
@@ -172,11 +246,18 @@ class SimpleForm extends Component {
               trigger: '7',
             },
             {
+              id: 'validate',
+              component: <End />,
+              asMessage: true,
+              triger: 'update',
+            },
+            {
               id: 'end-message',
               message: 'Thanks! Your data was submitted successfully!',
-              end: true,
+             
             },
           ]}
+       
         />
       </ThemeProvider>
     );
