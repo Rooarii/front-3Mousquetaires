@@ -17,9 +17,9 @@ const Formation = () => {
         <div className="flex">
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              convallis dictum lorem id imperdiet. Nam dapibus lacus sit amet
-              eleifend faucibus. Nulla facilisi.{" "}
+              Ras le bol de polluer à base d'énergies fossiles ! Ouaaaaai ! 
+              Alors la solution est toute trouvée, la question vite répondu ! 
+              rejoint la formation création de batterie pour t'alimenter toi même en énergie en transpirant sur ton vélo !
             </p>
           </div>
         </div>
@@ -29,9 +29,11 @@ const Formation = () => {
         <div className="flex">
           <div className="child-flex">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              convallis dictum lorem id imperdiet. Nam dapibus lacus sit amet
-              eleifend faucibus. Nulla facilisi.{" "}
+             Dans la team, que des écolos ! 
+             Bien sur, c'est le futur ! 
+             Elon Musk n'est pas arrivé la où il est par hasard, 
+             Et ouaiiiis ! 
+             Alors si tu aussi tu veux devenir riche (de connaissances), alors rejoint-nous :)
             </p>
           </div>
         </div>

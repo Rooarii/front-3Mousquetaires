@@ -5,6 +5,10 @@
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
   @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap");
 }
+*button:active{
+  outline-style: none;
+  border: none;
+}
 
 html {
   font-size: 62.5%;
