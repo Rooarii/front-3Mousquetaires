@@ -7,16 +7,16 @@ const Project = () => {
 
 
 
-<div className="main-container">
-      <div className="flex-container">
+<div className="main-container-project">
+      <div className="flex-container-project">
         <div>
           <h1>{data.projectElectronique[1].name}</h1>
         </div>
         <img alt="electronic" src={data.projectElectronique[1].img} />
       </div>
-      <div className="description-container">
+      <div className="description-container-project">
         <h2>Description</h2>
-        <div className="flex">
+        <div className="flex-project">
           <div>
             <p>
               Faire le ménage ? Non ! À manger ? Non Plus !
@@ -25,18 +25,18 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div className="team-container">
+      <div className="team-container-project">
         <h2>Team</h2>
-        <div className="flex">
-          <div className="child-flex">
+        <div className="flex-project">
+          <div className="child-flex-project">
             <p>
              Nous c'est les flemmards ! Tu n'aimes pas faire si, pas faire ça ! Nous non plus ! Mais on n'est pas bête. On construit des robots qui nous assistent. Ils ne parlent pas beaucoup mais ont les aimes bien !   
             </p>
           </div>
         </div>
       </div>
-      <div className="button" >
-        <button className="big-button" type="button">
+      <div className="button-project" >
+        <button className="big-button-project" type="button">
           JOIN US
         </button>
       </div>
