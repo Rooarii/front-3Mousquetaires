@@ -16,7 +16,7 @@ function App() {
           <Link to="/"><h1>Home</h1></Link>
         </header>
           <div className="sticky">
-            <ChatBot className="chatbot" />
+             {/* <ChatBot className="chatbot" />  */}
           </div>    
       </div>
       <Switch>
