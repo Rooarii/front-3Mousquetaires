@@ -5,7 +5,6 @@
     padding-top: 1rem;
     font-size: 3.5rem;
     text-align: center;
-
     font-family: "Bungee Shade", cursive;
     color: rgb(97, 97, 97);
     .play {
@@ -21,7 +20,7 @@
     min-width: 100vw;
   }
 
-  .main-container {
+  .main-container-home {
     width: 90vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -29,7 +28,7 @@
     grid-row-gap: 1rem;
     margin: 4rem;
   }
-  .container {
+  .specialty-container {
     width: min-content;
     text-align: center;
     margin: 0rem;
@@ -84,7 +83,7 @@
         display: none;
       }
     }
-    .main-container {
+    .main-container-home {
       grid-template-columns: repeat(4, 1fr);
       grid-column-gap: 3rem;
       grid-row-gap: 3rem;
@@ -104,6 +103,7 @@
       margin: auto;
       margin-bottom: 20rem;
       right: 20rem;
+      display: none;
     }
     //End Chatbot section
   }
@@ -115,13 +115,12 @@
       font-size: 7rem;
       margin-right: 40rem;
     }
-    .main-container {
+    .main-container-home {
       margin-right: 90rem;
       padding-right: 5rem;
       border-right: 0.3rem solid rgb(191, 191, 191);
     }
-
-    .container {
+    .specialty-container {
       margin-right: 1rem;
     }
   }

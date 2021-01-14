@@ -11,10 +11,10 @@ const Main = () => {
 
       <h1>Let's <span className='play'>Play</span></h1>
       <div className="container-grid">
-        <div className="main-container">
+        <div className="main-container-home">
           {
             data.categories.map((item, index) => (
-              <div className="container" key={index}>
+              <div className="specialty-container" key={index}>
                 <div className="parent" >
                   <Link to="/category"><h3 style={{ color: `${item.color}` }}>{item.name.slice(0, 2).toUpperCase()}</h3></Link>
                 </div>
@@ -31,7 +31,6 @@ const Main = () => {
       </div>
     </div>
   )
-
 }
 
           

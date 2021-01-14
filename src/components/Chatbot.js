@@ -249,12 +249,12 @@ class SimpleForm extends Component {
             // },
             {
               id: '7',
-              message: 'Super! Et si on faisait la point ?',
+              message: 'Super! Et si on faisait le point ?',
               trigger: 'review',
             },
             {
               id: '8',
-              message: 'Super! Et si on faisait la point ?',
+              message: 'Super! Et si on faisait le point ?',
               trigger: 'review',
             },
             {
