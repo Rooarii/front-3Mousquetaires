@@ -1,53 +1,52 @@
-import formations from '../json/formations.json';
-import projects from '../json/projects.json';
-import React from 'react';
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
-import { Toast, ToastBody, ToastHeader } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import formations from "../json/formations.json";
+import projects from "../json/projects.json";
+import React from "react";
+
+import { Link } from "react-router-dom";
 
 const CategoryMainPage = () => {
   return (
-    <>
+    <div className="main">
       <div className="header">
-        <h1 className="title-header">Electronique</h1>
-        <img className="img-header" src={formations.electronique[1].img }/>
+        <h1>ELECTRONIC</h1>
+        <img alt="electronic" src={formations.electronique[0].img} />
       </div>
-      <h1 className="category-title ">Projects :</h1>
-      <div className="card-wrap">
-      {projects.projectElectronique.map(e => {
-  return (
-    <Link className="link" to='/project'>
-      <Card className="card-body">
-        <CardImg top  width="auto" src={e.img} alt="Card image cap" />
-        <CardBody>
-          <CardTitle tag="h5">{e.name}</CardTitle>
-        </CardBody>
-      </Card> 
-      </Link>
-  )
-})}
+
+      <div className="category-main">
+        <h1>PROJECT</h1>
+        <div className="flex-container">
+          {projects.projectElectronique.map((e) => {
+            return (
+              <Link className="link" to="/project">
+                <div className="flex-child">
+                  <img  width="auto" src={e.img} alt="projet" />
+                  <div className="title-container">
+                    <h2>{e.name}</h2>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        <h1>FORMATIONS</h1>
+        <div className="flex-container">
+          {formations.electronique.slice(1).map((e) => {
+            return (
+              <Link className="link" to="/project">
+                <div className="flex-child" >
+                  <img top width="auto" src={e.img} alt="electronic" />
+                  <div className="title-container">
+                    <h2>{e.name}</h2>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
-      
-      <h1 className="category-title ">Formations :</h1>
-      <div className="card-wrap">
-      {formations.electronique.map(e => {
-        return (
-          <Link className="link" to='/project'>
-      <Card className="card-body">
-        <CardImg top width="auto" src={e.img} alt="Card image cap" />
-        <CardBody>
-          <CardTitle tag="h5">{e.name}</CardTitle>
-        </CardBody>
-            </Card> 
-            </Link>
-  )
-})}
-      </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
 export default CategoryMainPage;

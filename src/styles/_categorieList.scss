@@ -1,4 +1,5 @@
 @-webkit-keyframes swing
+
 {
     15%
     {
@@ -71,7 +72,8 @@
     padding-top: 5rem;
     font-size: 5rem;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    
+  font-family: "Bungee Shade", cursive;
     @media screen and (min-width: 1000px) {
       font-size: 7rem;
     };
@@ -227,3 +229,6 @@
 
 };
 
+.link-router:hover{
+  text-decoration: none;
+}
