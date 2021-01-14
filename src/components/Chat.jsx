@@ -11,12 +11,14 @@ const Chat = ({ location }) => {
   const [messages,  setMessages] = useState([]);
   const ENDPOINT = 'localhost:5000'
 
+  
+
   useEffect(()=>{
     const { name, room} = queryString.parse(location.search)
     // console.log(location);
-    // console.log(name, room)
-    socket = io(ENDPOINT, {transports: ['websocket']}
-    )
+    console.log(name, room)
+    var connectionOptions = {"transports" : ["websockets"]};
+    socket = io(ENDPOINT, connectionOptions);
 
     setName(name);
     setRoom(room);
@@ -35,6 +37,7 @@ const Chat = ({ location }) => {
 
   },[ENDPOINT, location.search]);
 
+  // second useEffect that listen to messages
   useEffect(()=>{
     socket.on('message', (message) =>{
       setMessages([...messages, message]);
@@ -44,12 +47,13 @@ const Chat = ({ location }) => {
   //function for sending messages
 
   const sendMessage = (event)=>{
+    event.preventDefault();
     if (message){
       socket.emit('sendMessage', message, ()=> setMessage(''));
     }
   }
 
-  console.log(message, messages)
+  console.log(message, messages);
 
   return (
     <Fragment>
@@ -62,8 +66,8 @@ const Chat = ({ location }) => {
           />
         </div>
       </div>
-       <h1>Chat</h1>
-      <p>{`Hello ${name}, welcome to the ${room} room`}</p>
+       {/* <h1>Chat</h1>
+      <p>{`Hello ${name}, welcome to the ${room} room`}</p> */}
     </Fragment>
    
   )
