@@ -15,7 +15,9 @@ function App() {
           <Navbar />
           <Link to="/"><h1>Home</h1></Link>
         </header>
-        <ChatBot className="chatbot" />
+          <div className="sticky">
+            <ChatBot className="chatbot" />
+          </div>    
       </div>
       <Switch>
         <Route exact path="/" component={CategorieList}/>
