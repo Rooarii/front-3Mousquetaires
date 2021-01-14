@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
+import Categorielist from './CategorieList';
 
 const theme = {
   background: '#f5f8fb',
@@ -24,39 +25,28 @@ class Review extends Component {
 
     this.state = {
       name: '',
-      interest: '',
+      wish: '',
       age: '',
     };
   }
 
   componentWillMount() {
     const { steps } = this.props;
-    const { name, interest, interestChoice} = steps;
+    const { name, wish, interestChoice} = steps;
 
-    this.setState({ name, interest, interestChoice });
+    this.setState({ name, wish, interestChoice });
   }
 
   render() {
-    const { name, interest, interestChoice } = this.state;
+    const { name, wish, interestChoice } = this.state;
     return (
       <div style={{ width: '100%' }}>
-        <h3>Résumé</h3>
-        <table>
-          <tbody>
-            <tr>
-              <td>Name</td>
-              <td>{name.value}</td>
-            </tr>
-            <tr>
-              <td>Centres d'intérêts</td>
-              <td>{interestChoice.value}</td>
-            </tr>
-            <tr>
-              <td>Tu veux</td>
-              <td>{interest.value}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div>
+          <p>Me re-voila {name.value} !</p>
+          <p>Tu souhaite {wish.value}</p>
+          <p>Et tu es intéressé par {interestChoice.value}</p>
+          
+        </div>
       </div>
     );
   }
@@ -84,18 +74,18 @@ class End extends Component {
 
   componentWillMount() {
     const { steps } = this.props;
-    const { name, interest, age, interestChoice} = steps;
+    const { name, wish, age, interestChoice} = steps;
 
-    this.setState({ name, interest, age, interestChoice });
+    this.setState({ name, wish, age, interestChoice });
   }
 
   render() {
     const { name, interestChoice } = this.state;
     return (
       <div style={{ width: '100%' }}>
-        <p>{`Bien joué ${name.value}!`}</p>
-        <p>{`Clique sur le centre d'intérêt ${interestChoice.value}`}</p>
-        <p>A bientôt ma gueule !</p>
+        <p>{`Bien joué ${name.value}!` }</p>
+        <p>{`Pour trouver ce qu'il te faut ,vas sur l'icone ${interestChoice.value}`}</p>
+        <p>A bientot</p>
       </div>
     );
   }
@@ -115,12 +105,13 @@ class SimpleForm extends Component {
     return (
       <ThemeProvider theme={theme}>
         <ChatBot
-          speechSynthesis={{ enable: true, lang: 'fr' }}
+          //speechSynthesis={{ enable: true, lang: 'fr' }}
           recognitionEnable={true}
           steps={[
+            // QUESTION 1
             {
               id: '1',
-              message: "Bonjour, bienvenue chez Artilect Moi c’est Richard, et toi ?",
+              message: "Bonjour, bienvenue chez Artilect ! Moi c’est Richard ! et toi ?",
               trigger: 'name',
             },
             {
@@ -128,22 +119,24 @@ class SimpleForm extends Component {
               user: true,
               trigger: '3',
             },
+            //QUESTION 2
             {
               id: '3',
               message: `Super {previousValue}! commençons!
-              Tu es plutôt intéréssé par:`,
-              trigger: 'interest',
+              Tu souhaites...`,
+              trigger: 'wish',
             },
             {
-              id: 'interest',
+              id: 'wish',
               options: [
-                { value: 'Apprendre de nouvelles choses', label: 'Apprendre de nouvelles choses', trigger: '5' },
-                { value: 'Rejoindre un projet', label: 'Rejoindre un projet', trigger: '5' },
-                { value: 'Réserver une machine', label: 'Réserver une machine', trigger: '5' },
+                { value: 'Apprendre de nouvelles choses', label: 'Apprendre de nouvelles choses', trigger: 'new' },
+                { value: 'Rejoindre un projet', label: 'Rejoindre un projet', trigger: 'join' },
+                { value: 'Réserver une machine', label: 'Réserver une machine', trigger: 'domainChoiseForMachine' },
               ],
             },
+            //QUESTION 3
             {
-              id: '5',
+              id: 'new',
               message: `Dis moi tout! Quels sont tes centres d'intérêts?`,
               trigger: 'interestChoice',
             },
@@ -164,6 +157,81 @@ class SimpleForm extends Component {
               trigger:'7',
              
             },
+
+            //question 3bis
+            {
+              id: 'join',
+              message: `Un projet, Oui ! Mais dans quel domaine ?`,
+              trigger: 'interestChoice',
+            },
+            {
+              id: 'interestChoice',
+              options: [
+                { value: 'Biologie', label: 'Biologie', trigger: '7' },
+                { value: 'Electronique', label: 'Electronique', trigger: '7' },
+                { value: 'Couture', label: 'Couture', trigger: '7' },
+                { value: 'Drone', label: 'Drone', trigger: '7' },
+                { value: 'Machines', label: 'Machines', trigger: '7' },
+                { value: 'Design', label: 'Design', trigger: '7' },
+                { value: 'Musique', label: 'Musique', trigger: '7' },
+                { value: 'Robotique', label: 'Robotique', trigger: '7' },
+                { value: 'Architecture', label: 'Design', trigger: '7' },
+                { value: 'Média', label: 'Média', trigger: '7' },
+              ],
+              trigger:'7',
+             
+            },
+
+
+            {
+              id: 'domainChoiseForMachine',
+              message: `choisi ton domaine pour lequel tu veux louer une machine !`,
+              trigger: 'interestChoice',
+            },
+
+
+            {
+              id: 'interestChoice',
+              options: [
+                { value: 'Biologie', label: 'Biologie', trigger: '7' },
+                { value: 'Electronique', label: 'Electronique', trigger: '7' },
+                { value: 'Couture', label: 'Couture', trigger: '7' },
+                { value: 'Drone', label: 'Drone', trigger: '7' },
+                { value: 'Machines', label: 'Machines', trigger: '7' },
+                { value: 'Design', label: 'Design', trigger: '7' },
+                { value: 'Musique', label: 'Musique', trigger: '7' },
+                { value: 'Robotique', label: 'Robotique', trigger: '7' },
+                { value: 'Architecture', label: 'Design', trigger: '7' },
+                { value: 'Média', label: 'Média', trigger: '7' },
+              ],
+              trigger:'7',
+             
+            },
+
+            {
+              id: 'Machine',
+              message: `Choisi ta machine`,
+              trigger: 'machine',
+            },
+
+
+            {
+              id: 'machine',
+              options: [
+                { value: 'Découpe laser', label: 'Découpe laser', trigger: '8' },
+                { value: 'Imprimante 3D', label: 'Imprimante 3D', trigger: '8' },
+                { value: 'Imprimante UV', label: 'Imprimante UV', trigger: '8' },
+                { value: 'Sublimation', label: 'Sublimation', trigger: '8' },
+                { value: 'Découpe Vinyle', label: 'Machines', trigger: '8' },
+                { value: 'CNC', label: 'CNC', trigger: '8' },
+                { value: 'Machine à coudre', label: 'Machine à coudre', trigger: '8' },
+                { value: 'Recouvreuse', label: 'Recouvreuse', trigger: '8' },
+                { value: 'Surjetteuse', label: 'Surjeutteuse', trigger: '8' },
+                { value: 'Triple entrainement', label: 'Triple entrainement', trigger: '8' },
+              ],
+              trigger:'8',
+             
+            },
             // {
             //   id: 'age',
             //   user: true,
@@ -182,7 +250,12 @@ class SimpleForm extends Component {
             // },
             {
               id: '7',
-              message: 'Super! Voici tes réponses',
+              message: 'Super! Et si on faisait la point ?',
+              trigger: 'review',
+            },
+            {
+              id: '8',
+              message: 'Super! Et si on faisait la point ?',
               trigger: 'review',
             },
             {
@@ -193,7 +266,7 @@ class SimpleForm extends Component {
             },
             {
               id: 'update',
-              message: 'Tout est ok?',
+              message: 'Est-ce bien cela ?',
               trigger: 'update-question',
             },
             {
@@ -226,8 +299,8 @@ class SimpleForm extends Component {
               id: 'update-fields',
               options: [
                 { value: 'name', label: 'Prénom', trigger: 'update-name' },
-                { value: 'Tu veux', label: 'Tu veux', trigger: 'update-interest' },
-                { value: 'age', label: 'Age', trigger: 'update-age' },
+                { value: 'wish', label: 'Ce que je veux faire', trigger: 'update-interest' },
+                { value: 'interestChoise', label: `Mon centre d'interet`, trigger: 'update-interestChoice' },
               ],
             },
             {
@@ -237,12 +310,12 @@ class SimpleForm extends Component {
             },
             {
               id: 'update-interest',
-              update: 'interest',
+              update: 'wish',
               trigger: '7',
             },
             {
-              id: 'update-age',
-              update: 'age',
+              id: 'update-interestChoice',
+              update: 'interestChoice',
               trigger: '7',
             },
             {
