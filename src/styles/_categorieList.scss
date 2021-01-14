@@ -96,6 +96,11 @@
         font-size: 5rem;
       }
     }
+    .chatbot-container {
+      position: absolute;
+      margin: auto;
+      margin-bottom: 20rem;
+    }
   }
 }
 
@@ -103,6 +108,16 @@
   .categorie-list-container {
     h1 {
       font-size: 7rem;
+      margin-right: 40rem;
+    }
+    .main-container {
+      margin-right: 90rem;
+      padding-right: 5rem;
+      border-right: 0.3rem solid rgb(191, 191, 191);
+    }
+
+    .container {
+      margin-right: 1rem;
     }
   }
 }

@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 import CategorieList from './components/CategorieList'
 import Navbar from './components/Navbar'
 import CategoryMainPage from './components/CategoryMainPage';
-import ChatBot from './components/Chatbot';
+// import ChatBot from './components/Chatbot';
 import FicheProjet from './components/FicheProjet';
 import Loader from './components/Loader';
+// import ChatbotContainer from './components/ChatbotContainer';
 
 import './styles/app.scss';
 
@@ -30,6 +31,7 @@ function App() {
           </header>
             <div className="sticky">
               {/* <ChatBot className="chatbot" /> */}
+              {/* <ChatbotContainer /> */}
             </div>    
         </div>
         <Switch>
