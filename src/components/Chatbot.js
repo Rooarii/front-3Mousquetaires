@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import Categorielist from './CategorieList';
+import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
+
 
 const theme = {
   background: '#f5f8fb',
@@ -42,8 +43,8 @@ class Review extends Component {
     return (
       <div style={{ width: '100%' }}>
         <div>
-          <p>Me re-voila {name.value} !</p>
-          <p>Tu souhaite {wish.value}</p>
+          <p>Si j'ai bien noté {name.value},</p>
+          <p>Tu souhaites {wish.value}</p>
           <p>Et tu es intéressé par {interestChoice.value}</p>
           
         </div>
@@ -80,12 +81,14 @@ class End extends Component {
   }
 
   render() {
-    const { name, interestChoice } = this.state;
+    const { name, wish, interestChoice } = this.state;
     return (
+      
       <div style={{ width: '100%' }}>
-        <p>{`Bien joué ${name.value}!` }</p>
+        <p>{`${name.value},` }</p>
         <p>{`Pour trouver ce qu'il te faut ,vas sur l'icone ${interestChoice.value}`}</p>
-        <p>A bientot</p>
+        <p>{`Puis sur la section ${wish.value}`}</p>
+        <p>A bientot !</p>
       </div>
     );
   }
