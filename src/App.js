@@ -1,5 +1,5 @@
 import './styles/app.scss';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 import CategorieList from './components/CategorieList'
 import Navbar from './components/Navbar'
 import CategoryMainPage from './components/CategoryMainPage';
@@ -8,11 +8,15 @@ import Formation from './components/Formation'
 
 
 function App() {
+
+
+
   return (
     <Router>
       <div className="App">
         <header className="App-header">
           <Navbar />
+          {/* <Link to="/">Home</Link> */}
         </header>
           <div className="sticky">
              {/* <ChatBot className="chatbot" />  */}
