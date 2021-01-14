@@ -1,18 +1,29 @@
-import './styles/app.scss'
+import './styles/app.scss';
+import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 import CategorieList from './components/CategorieList'
-//import ChatBot from './components/Chatbot'
+import Navbar from './components/Navbar'
+import CategoryMainPage from './components/CategoryMainPage';
+import ChatBot from './components/Chatbot'
 import FicheProjet from './components/FicheProjet'
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <ChatBot className="chatbot" /> */}
-        <CategorieList />
-      </header>
-      <FicheProjet />
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Navbar />
+          <Link to="/"><h1>Home</h1></Link>
+        </header>
+        <ChatBot className="chatbot" />
+      </div>
+      <Switch>
+        <Route exact path="/" component={CategorieList}/>
+        <Route path='/category' component={CategoryMainPage} />
+        <Route path='/project' component={FicheProjet} />
+        {/* <Route path='/formation' component={FicheFormation} /> */}
+    </Switch>
+    </Router>
   );
 }
 

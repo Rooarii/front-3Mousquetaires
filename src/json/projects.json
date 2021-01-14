@@ -1,56 +1,56 @@
 {
-  "project-electronique":[
-   { "1":[
-     {"name":"Voiture télécommander"},
-     {"description":"blabla"},
-     {"img":"url"}
-     ]},
-   { "2":[
-     {"name":"Robot ménager"},
-     {"description":"blabla"},
-     {"img":"url"}
-     ]},
-   { "3":[
-     {"name":"Drone"},
-     {"description":"blabla"},
-     {"img":"url"}
-     ]},
-   { "4":[
-     {"name":"Caméra de surveillance"},
-     {"description":"blabla"},
-     {"img":"url"}
-     ]},
-   { "5":[
-     {"name":"Lampe connectée"},
-     {"description":"blabla"},
-     {"img":"url"}
-     ]}
+  "projectElectronique":[
+   { 
+     "name":"Voiture télécommander",
+     "description":"blabla",
+     "img":"url"
+     },
+   { 
+     "name":"Robot ménager",
+     "description":"blabla",
+     "img":"url"
+     },
+   { 
+     "name":"Drone",
+     "description":"blabla",
+     "img":"url"
+     },
+   { 
+     "name":"Caméra de surveillance",
+     "description":"blabla",
+     "img":"url"
+     },
+   { 
+     "name":"Lampe connectée",
+     "description":"blabla",
+     "img":"url"
+     }
   ],
   "project-design":[
-    { "1":[
-      {"name":"Débuter un tableaux"},
-      {"description":"blabla"},
-      {"img":"url"}
-      ]},
-    { "2":[
-      {"name":"Dessin Mode/Vetement"},
-      {"description":"blabla"},
-      {"img":"url"}
-      ]},
-    { "3":[
-      {"name":"Dessin architècture"},
-      {"description":"blabla"},
-      {"img":"url"}
-      ]},
-    { "4":[
-      {"name":"Peinture acrylique sur toile"},
-      {"description":"blabla"},
-      {"img":"url"}
-      ]},
-    { "5":[
-      {"name":"Web design"},
-      {"description":"blabla"},
-      {"img":"url"}
-      ]}
+    { 
+      "name":"Débuter un tableaux",
+      "description":"blabla",
+      "img":"url"
+      },
+    { 
+      "name":"Dessin Mode/Vetement",
+      "description":"blabla",
+      "img":"url"
+      },
+    { 
+      "name":"Dessin architècture",
+      "description":"blabla",
+      "img":"url"
+      },
+    { 
+      "name":"Peinture acrylique sur toile",
+      "description":"blabla",
+      "img":"url"
+      },
+    { 
+      "name":"Web design",
+      "description":"blabla",
+      "img":"url"
+      }
   ]
 }
