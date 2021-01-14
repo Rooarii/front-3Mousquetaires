@@ -18,9 +18,19 @@ const Chat = ({ location }) => {
 
     setName(name);
     setRoom(room);
-    console.log(socket)
+    // console.log(socket)
 
-    socket.emit('join', {name, room})
+    // join method
+    socket.emit('join', {name, room});
+
+    return () =>{
+      // call disconnect event
+      socket.emit('disconnect');
+
+      // close user connection
+      socket.off();
+    }
+
   },[ENDPOINT, location.search])
   return (
     <Fragment>
