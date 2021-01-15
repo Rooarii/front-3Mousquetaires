@@ -8,6 +8,7 @@ import Loader from './components/Loader';
 import Formation from './components/Formation';
 import Calendar from './components/Calendar';
 import Project from './components/Project';
+import Tuto from './components/Tuto';
 
 import './styles/app.scss';
 
@@ -39,6 +40,7 @@ export default function App() {
         <Route path='/project' component={Project} />
         <Route path='/formation' component={Formation} />
         <Route path='/calendar' component={Calendar} />
+        <Route path='/tuto' component={Tuto} />
     </Switch>
       </Router>
       }
