@@ -7,7 +7,7 @@ import Category from './components/Category';
 import Loader from './components/Loader';
 import Formation from './components/Formation';
 import Calendar from './components/Calendar';
-
+import Chat from './components/Chat/Chat'
 import './styles/app.scss';
 
 export default function App() {
@@ -36,6 +36,7 @@ export default function App() {
         <Route path='/category' component={Category} />
         <Route path='/project' component={Formation} />
         <Route path='/calendar' component={Calendar} />
+        <Route path="/chat" component={Chat} />
     </Switch>
       </Router>
       }

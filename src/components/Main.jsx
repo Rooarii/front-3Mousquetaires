@@ -4,12 +4,14 @@ import data from "../json/categories.json";
 import { Link } from 'react-router-dom';
 
 import ChatBot from './Chatbot'
+import SignIn from './Join/Join';
 
 const Main = () => {
   return (
     <div className="categorie-list-container">
 
       <h1>Let's <span className='play'>Play</span></h1>
+      <SignIn />
       <div className="container-grid">
         <div className="main-container-home">
           {
@@ -22,9 +24,12 @@ const Main = () => {
               </div>
             ))}
         </div>
+       
         <div className="chatbot-container">
+          
             <ChatBot />
         </div>
+        
       </div>
       <div className="scroll-indication">
         <i class="fas fa-angle-double-down" />
