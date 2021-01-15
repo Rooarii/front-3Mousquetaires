@@ -5,7 +5,7 @@ import './Join.css';
 
 export default function SignIn() {
   const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
+  const [room, setRoom] = useState('General');
 
   return (
     <div className="joinOuterContainer">
@@ -15,7 +15,7 @@ export default function SignIn() {
           <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
         </div>
         <div>
-          <input placeholder="Room" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
+          <label placeholder="Room" value="General" className="joinInput" type="text" onChange={(event) => setRoom(event.target.value)} />
         </div>
         <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
           <button className={'button mt-20'} type="submit">Bla Bla</button>
