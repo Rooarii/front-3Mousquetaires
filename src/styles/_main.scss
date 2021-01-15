@@ -16,9 +16,10 @@
 
   .container-grid {
     display: flex;
-    justify-content: center;
+    justify-content: flex-around;
     align-items: center;
     min-width: 100vw;
+    flex-wrap: wrap;
   }
 
   .main-container {
@@ -76,10 +77,6 @@
     }
   }
 
-  .chatbot-container {
-    display: none;
-  }
-
   // Media Query
   @media screen and(min-width: 650px) {
     .categorie-list-container {
@@ -92,7 +89,7 @@
       grid-template-columns: repeat(4, 1fr);
       grid-column-gap: 3rem;
       grid-row-gap: 3rem;
-      margin: 5rem 50rem;
+      margin: 5rem 0rem;
     }
     .parent {
       width: 15rem;
@@ -101,15 +98,6 @@
         font-size: 5rem;
       }
     }
-
-    // Chatbot section
-    .chatbot-container {
-      position: absolute;
-      margin: auto;
-      margin-bottom: 20rem;
-      right: 20rem;
-    }
-    //End Chatbot section
   }
 }
 
@@ -120,14 +108,25 @@
       margin-right: 40rem;
     }
     .main-container {
-      margin-right: 90rem;
+      margin-left: 50rem;
+      margin-right: 0rem;
       padding-right: 5rem;
       border-right: 0.3rem solid rgb(191, 191, 191);
+      flex: 1;
     }
-
+    .chatbot-container {
+      flex: 1;
+      margin-left: 10rem;
+    }
     .container {
       margin-right: 1rem;
     }
+  }
+}
+
+@media screen and(max-width: 450px) {
+  .chatbot-container {
+    display: none;
   }
 }
 
