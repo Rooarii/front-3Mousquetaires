@@ -1,7 +1,8 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Main from './components/Main';
+// import Main from './components/Main';
+import Main2 from './components/Main2';
 import Navbar from './components/Navbar';
 import Category from './components/Category';
 import Project from './components/Project';
@@ -32,7 +33,7 @@ function App() {
           </header>
         </div>
         <Switch>
-          <Route exact path="/" component={Main}/>
+          <Route exact path="/" component={Main2}/>
           <Route path='/category' component={Category} />
           <Route path='/project' component={Project} />
           <Route path='/calendar' component={Calendar} />
