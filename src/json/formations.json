@@ -1,30 +1,33 @@
 {
-    "design":[
-      {"name":"Formation UX/UI",
-       "img":"https://www.alternance-professionnelle.fr/wp-content/uploads/2017/09/objets-connectés-formation.jpg"
-      },
-      {"name":"Formation Photoshop"},
-      {"name":"Formation Design graphique"},
-      {"name":"Formation Design de mode"},
-      {"name":"Formation Art & Design"}
-    ],
-    "electronique":[
-      {
-        "name":"Formation Object connecter de A-Z",
-        "img":"https://www.meilleure-innovation.com/wp-content/uploads/2013/10/Bee-Wall_Connected.jpg"
-      },
-      {
-        "name":"Formation Micro soudure",
-       "img":"https://therepairacademy.com/wp-content/uploads/2019/10/microsoudure-reparation-2-e1572432133224.jpg"
-      },
-      {"name":"Formation Branchement électronique",
-       "img":"http://www.forum-electricite.com/schemas/branchement-domino-3-fils.jpg"
-      },
-      {"name":"Formation Gestion/Fabriquation de baterrie",
-       "img":"https://i.pinimg.com/originals/a2/39/42/a23942d9a17295e7fc145e44f1ec4348.jpg"
-      },
-      {"name":"Formation Object Cablage électronique",
-       "img":"https://i.ytimg.com/vi/g4QA7bGg-ro/hqdefault.jpg"
-      }
-    ]
+  "design":[
+    {"name":"Formation UX/UI",
+     "img":"https://www.alternance-professionnelle.fr/wp-content/uploads/2017/09/objets-connectés-formation.jpg"
+    },
+    {"name":"Formation Photoshop"},
+    {"name":"Formation Design graphique"},
+    {"name":"Formation Design de mode"},
+    {"name":"Formation Art & Design"}
+  ],
+  "electronique":[
+    {
+      "img":"https://img.pixers.pics/pho_wat(s3:700/FO/48/36/24/84/700_FO48362484_30045f183526a0f45cb05dbfa9cea87a.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/posters-carte-de-circuit-imprime-seamless.jpg.jpg"
+    },
+    {
+      "name":"Formation Object connecter de A-Z",
+      "img":"https://cdn.iconscout.com/icon/free/png-512/wifi-1767906-1502159.png"
+    },
+    {
+      "name":"Formation Micro soudure",
+     "img":"https://us.123rf.com/450wm/cteconsulting/cteconsulting1802/cteconsulting180200090/96245736-une-image-d-amp-un-soudeur-soudeur-homme-noir-tableau-noir-.jpg?ver=6"
+    },
+    {"name":"Formation Branchement électronique",
+     "img":"https://pixy.org/src/37/375394.png"
+    },
+    {"name":"Formation Gestion/Fabriquation de baterrie",
+     "img":"https://cdn.iconscout.com/icon/free/png-512/battery-664-470326.png"
+    },
+    {"name":"Formation Réseau",
+     "img":"https://cdn.pixabay.com/photo/2019/11/17/07/53/network-4631724__340.png"
+    }
+  ]
 }

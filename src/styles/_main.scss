@@ -76,6 +76,10 @@
     }
   }
 
+  .chatbot-container {
+    display: none;
+  }
+
   // Media Query
   @media screen and(min-width: 650px) {
     .categorie-list-container {

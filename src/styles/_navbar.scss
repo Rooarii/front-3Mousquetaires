@@ -20,7 +20,6 @@
       cursor: pointer;
     }
   }
-
   .profil {
     display: flex;
     flex: 1;
@@ -40,6 +39,9 @@
       margin: auto 0rem;
       margin-top: 2.5rem;
       font-size: 1.2rem;
+    }
+    i:nth-child(1) {
+      margin-top: 2.7rem;
     }
     img {
       width: 4rem;
