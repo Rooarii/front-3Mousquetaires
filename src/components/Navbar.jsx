@@ -21,7 +21,9 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="profil">
-          <button type='button'>Tutoriels</button>
+        <Link to="/tuto">
+            <button type="button" className='btn-tutorial'>Tutoriels</button>
+          </Link>
           <Link to='/calendar'>
             <i class="far fa-calendar-plus" />
           </Link>

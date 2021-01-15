@@ -73,6 +73,10 @@
       button {
         display: none;
       }
+      i:nth-child(3) {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
@@ -99,8 +103,14 @@
         height: 3.5rem;
         font-size: 1.6rem;
       }
+      .btn-tutorial {
+        margin-top: 0rem;
+      }
       i {
         font-size: 2rem;
+      }
+      i:nth-child(1) {
+        margin-top: 0.7rem;
       }
       img {
         width: 5rem;

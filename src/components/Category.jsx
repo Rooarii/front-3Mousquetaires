@@ -32,7 +32,7 @@ const Category = () => {
         <div className="flex-container">
           {formations.electronique.slice(1).map((e) => {
             return (
-              <Link className="link" to="/project">
+              <Link className="link" to="/formation">
                 <div className="flex-child" >
                   <img top width="auto" src={e.img} alt="electronic" />
                   <div className="title-container">
