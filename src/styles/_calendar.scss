@@ -1,0 +1,31 @@
+.calendar-wrap {
+  margin: 4%;
+}
+
+.control-buttons{
+  display: flex;
+}
+.button-control {
+  margin: 2em;
+  height: 4em;
+  width: 5em;
+  border-radius: 4px;
+  text-align: center;
+  font-family: Montserrat;
+  background:rgb(237, 161, 161);
+  color: white;
+
+}
+.plus {
+  font-size: large;
+}
+.moins {
+  font-size: large;
+}
+.agendCtrls-event-input {
+  border-radius: 5px;
+  background:rgb(237, 161, 161);
+  font-family: Montserrat;
+
+
+}

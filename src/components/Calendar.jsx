@@ -16,28 +16,28 @@ const colors= {
     const items = [
   {
    _id            :guid(),
-    name          : 'Meeting , dev staff!',
+    name          : 'Formation impression 3D!',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 0),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0),
     classes       : 'color-1 color-4'
   },
   {
    _id            :guid(),
-    name          : 'Working lunch , Holly',
+    name          : 'Formation Micro soudure',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 11, 0),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 13, 0),
     classes       : 'color-2'
   },
   {
    _id            :guid(),
-    name          : 'Conference , plaza',
+    name          : 'Formation réseau',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 11 , 0),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 14 ,30),
     classes       : 'color-4'
   },
   {
    _id            :'event-4',
-    name          : 'Customers issues review',
+    name          : 'Réunion projet Robot ménager',
     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate()+2, 10, 0),
     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate()+2, 15, 0),
     classes       : 'color-3'
@@ -64,7 +64,13 @@ export default class Agenda extends Component {
   super(props);
 
 this.state = {
-  items:[],
+  items:[{
+    _id            :guid(),
+     name          : 'Meeting , dev staff!',
+     startDateTime : new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 0),
+     endDateTime   : new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0),
+     classes       : 'color-1 color-4'
+   }],
   selected:[],
   cellHeight:(60 / 4),
   showModal:false,
@@ -193,13 +199,12 @@ this.setState({numberOfDays:days})
     //   return <div style={{display:'block', position:'absolute' , background:'#FFF'}}>{props.item.name} <button onClick={()=> props.edit(props.item)}>Edit </button></div>
     // }
     return (
-
+<div className="calendar-wrap">
       <div className="content-expanded ">
 
         <div className="control-buttons">
-          <button  className="button-control" onClick={this.zoomIn}> <i className="zoom-plus-icon"></i> </button>
-          <button  className="button-control" onClick={this.zoomOut}> <i className="zoom-minus-icon"></i> </button>
-          <button  className="button-control" onClick={this._openModal}> <i className="schedule-icon"></i> </button>
+          <button  className="button-control" onClick={this.zoomIn}> <i className="zoom-plus-icon">Zoom <p className="plus">+</p></i> </button>
+          <button  className="button-control" onClick={this.zoomOut}> <i className="zoom-minus-icon">Zoom <p className="moins">-</p></i> </button>
           <button  className="button-control" onClick={this.changeView.bind(null , 7)}> {moment.duration(7, "days").humanize()}  </button>
           <button  className="button-control" onClick={this.changeView.bind(null , 4)}> {moment.duration(4, "days").humanize()}  </button>
           <button  className="button-control" onClick={this.changeView.bind(null , 3)}> {moment.duration(3, "days").humanize()}  </button>
@@ -230,22 +235,31 @@ this.setState({numberOfDays:days})
           onItemEdit={this.handleItemEdit.bind(this)}
           onCellSelect={this.handleCellSelection.bind(this)}
           onItemRemove={this.removeEvent.bind(this)}
-          onDateRangeChange={this.handleDateRangeChange.bind(this)} />
+            onDateRangeChange={this.handleDateRangeChange.bind(this)} />
+          <ReactAgendaCtrl
+            items={this.state.items}
+            itemColors={colors}
+            selectedCells={this.state.selected}
+            Addnew={this.addNewEvent}
+            edit={this.editEvent}  />
         {
           this.state.showModal? <Modal clickOutside={this._closeModal} >
           <div className="modal-content">
-             <ReactAgendaCtrl items={this.state.items} itemColors={colors} selectedCells={this.state.selected} Addnew={this.addNewEvent} edit={this.editEvent}  />
-
+                <ReactAgendaCtrl
+                  title="Hello"
+                  items={this.state.items}
+                  itemColors={colors}
+                  selectedCells={this.state.selected}
+                  Addnew={this.addNewEvent}
+                  edit={this.editEvent} />
           </div>
    </Modal>:''
 }
 
 
-       </div>
+        </div>
+        </div>
 
     );
   }
 }
-
-
-
