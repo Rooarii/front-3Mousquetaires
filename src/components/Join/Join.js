@@ -17,9 +17,14 @@ export default function SignIn() {
         <div>
           <label placeholder="Room" value="General" className="joinInput" type="text" onChange={(event) => setRoom(event.target.value)} />
         </div>
-        <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-          <button className={'button mt-20'} type="submit">Bla Bla</button>
+        <Link className="button" onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
+          <button className={'button mid-button'} type="submit">Bla Bla</button>
         </Link>
+        {/* <div className="button" >
+        <button className="big-button" type="button">
+          JOIN US
+        </button>
+      </div> */}
       </div>
     </div>
   );
