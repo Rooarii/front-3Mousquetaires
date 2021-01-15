@@ -16,7 +16,7 @@ html, body {
   display: flex;
   justify-content: center;
   text-align: center;
-  
+  background-color: #eec5b7;
   width: 100%;
   align-items: center;
   
@@ -26,6 +26,7 @@ html, body {
 
   display: flex;
   flex-direction: row;
+  margin-top: 10vh;
 }
 
 .joinInput {
@@ -78,7 +79,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-bottom: 10rem;
+ 
 }
 .button {
     font-size: 2rem;
