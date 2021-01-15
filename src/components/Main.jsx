@@ -1,44 +1,33 @@
-//import react from "react";
+import React, { Fragment } from "react";
 import data from "../json/categories.json";
-
 import { Link } from 'react-router-dom';
 
-import ChatBot from './Chatbot'
-import SignIn from './Join/Join';
+import ChatbotContainer from './ChatbotContainer'
 
-const Main = () => {
+const Main2 = () => {
   return (
-    <>
-    <div className="categorie-list-container">
-
-      <h1>Let's <span className='play'>Play</span></h1>
-      
-      <div className="container-grid">
-        <div className="main-container-home">
-          {
-            data.categories.map((item, index) => (
-              <div className="specialty-container" key={index}>
-                <div className="parent" >
-                  <Link to="/category"><h3 style={{ color: `${item.color}` }}>{item.name.slice(0, 2).toUpperCase()}</h3></Link>
+    <Fragment>
+      <div className="title-container">
+        <h1>Let's <span className='play'>Play</span></h1>
+      </div>
+      <div className='grid-container'>
+          <div className="topics-container">
+            {
+              data.categories.map((item, index) => (
+                <div className="topic" key={index}>
+                  <Link to="/category">
+                    <h3 style={{ color: `${item.color}` }}>{item.name.slice(0, 2).toUpperCase()}</h3>
+                  </Link>
+                  <div className="topic-title">
+                    <h2>{item.name.toUpperCase()}</h2>
+                  </div>
                 </div>
-                <h2>{item.name.toUpperCase()}</h2>
-              </div>
-            ))}
+              ))}
+          </div>
+              <ChatbotContainer />
         </div>
-       
-        <div className="chatbot-container">
-          {/* <SignIn /> */}
-          <ChatBot />
-        </div>
-      </div>
-      <div className="scroll-indication">x
-        <i class="fas fa-angle-double-down" />
-      </div>
-    </div>
-    
-  </>
+    </Fragment>
   )
 }
 
-          
-export default Main;
+export default Main2;
