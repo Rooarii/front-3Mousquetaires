@@ -8,6 +8,7 @@ import SignIn from './Join/Join';
 
 const Main = () => {
   return (
+    <>
     <div className="categorie-list-container">
 
       <h1>Let's <span className='play'>Play</span></h1>
@@ -29,12 +30,13 @@ const Main = () => {
           {/* <SignIn /> */}
           <ChatBot />
         </div>
-        
       </div>
-      <div className="scroll-indication">
+      <div className="scroll-indication">x
         <i class="fas fa-angle-double-down" />
       </div>
     </div>
+    
+  </>
   )
 }
 

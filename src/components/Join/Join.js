@@ -10,12 +10,15 @@ export default function SignIn() {
   return (
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
-        <h1 className="heading">Join</h1>
-        <div>
-          <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+        <div className="wrapp">
+          <h1 className="heading">Let's Talk</h1>
+          <div>
+            <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+          </div>
         </div>
+        
         <div>
-          <label placeholder="Room" value="General" className="joinInput" type="text" onChange={(event) => setRoom(event.target.value)} />
+          <label placeholder="Room" value="Artilect Chat" className="joinInput" type="text" onChange={(event) => setRoom(event.target.value)} />
         </div>
         <Link className="button" onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
           <button className={'button mid-button'} type="submit">Bla Bla</button>

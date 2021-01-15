@@ -11,6 +11,7 @@ import Calendar from './components/Calendar';
 import Chat from './components/Chat/Chat'
 import Tuto from './components/Tuto';
 import './styles/app.scss';
+import SignIn from './components/Join/Join'
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +31,7 @@ export default function App() {
             <Navbar />
           </header>
         </div>
+        
         <Switch>
           <Route exact path="/" component={Main}/>
           <Route path='/category' component={Category} />
@@ -39,6 +41,7 @@ export default function App() {
           <Route path='/tuto' component={Tuto} />
           <Route path="/chat" component={Chat} />
       </Switch>
+      <SignIn />
       </Router>
       }
     </Fragment>
