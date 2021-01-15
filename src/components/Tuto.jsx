@@ -4,11 +4,12 @@ import datatuto from "../json/tuto.json";
 
 function Tuto() {
   return(
-    <div>
+    <div className="tuto-container">
       {datatuto.tutos.map(item => {
         return(
-          <div>
-            <h1>{item.name}</h1>
+          <div className="name-container">
+            <h1 className="name-display"> <i class={item.description}/>     {item.name}</h1>
+            <br></br>
           </div>
         )
       })}

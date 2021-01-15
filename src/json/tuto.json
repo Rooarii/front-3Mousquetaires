@@ -2,59 +2,59 @@
   "tutos": [
     {
       "name":"Comment brancher une ampoule à LED ?",
-      "description":"#FACC54"
+      "description":"far fa-lightbulb"
     },
     {
       "name":"Coudre le dernier sac DESIGUAL, la classe assurée !",
-      "description":"#EE8484"
+      "description": "fas fa-shopping-bag"
     },
     {
       "name":"Comment construire un projet de A à Z sans toucher la Corse ?",
-      "description":"#88B700"
+      "description": "fas fa-project-diagram"
     },
     {
       "name":"Savoir se servir d'une imprimante 3D",
-      "description":"#2FC1FF"
+      "description" :"fas fa-cube"
     },
     {
       "name":"La surjetteuse pour les nuls !",
-      "description":"#F7BC91"
+      "description":  "fas fa-hands-helping"
     },
     {
       "name":"Et si on apprennez à coder ? Ar dui ni no ?",
-      "description":"#9ADE43"
+      "description": "fas fa-code"
     },
     {
       "name":"Le laser, où comment sulpter le bois ?",
-      "description":"#E9E007"
+      "description": "fas fa-hand-scissors"
     },
     {
       "name":"Comment brancher une ampoule à LED ?",
-      "description":"#FACC54"
+      "description":"far fa-lightbulb"
     },
     {
       "name":"Coudre le dernier sac DESIGUAL, la classe assurée !",
-      "description":"#EE8484"
+      "description": "fas fa-shopping-bag"
     },
     {
       "name":"Comment construire un projet de A à Z sans toucher la Corse ?",
-      "description":"#88B700"
+      "description": "fas fa-project-diagram"
     },
     {
       "name":"Savoir se servir d'une imprimante 3D",
-      "description":"#2FC1FF"
+      "description" :"fas fa-cube"
     },
     {
       "name":"La surjetteuse pour les nuls !",
-      "description":"#F7BC91"
+      "description":  "fas fa-hands-helping"
     },
     {
       "name":"Et si on apprennez à coder ? Ar dui ni no ?",
-      "description":"#9ADE43"
+      "description": "fas fa-code"
     },
     {
       "name":"Le laser, où comment sulpter le bois ?",
-      "description":"#E9E007"
+      "description": "fas fa-hand-scissors"
     }
   ]
 }
