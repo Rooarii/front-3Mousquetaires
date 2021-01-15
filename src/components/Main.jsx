@@ -4,31 +4,30 @@ import { Link } from 'react-router-dom';
 
 import ChatbotContainer from './ChatbotContainer'
 
-const CategorieList = () => {
+const Main = () => {
   return (
     <Fragment>
-      <div className="categorie-list-container">
+      <div className="title-container">
         <h1>Let's <span className='play'>Play</span></h1>
-        <div className="container-grid">
-          <div className="main-container">
+      </div>
+      <div className='grid-container'>
+          <div className="topics-container">
             {
               data.categories.map((item, index) => (
-                <div className="container" key={index}>
-                  <div className="parent" >
-                    <Link to="/category"><h3 style={{ color: `${item.color}` }}>{item.name.slice(0, 2).toUpperCase()}</h3></Link>
+                <div className="topic" key={index}>
+                  <Link to="/category">
+                    <h3 style={{ color: `${item.color}` }}>{item.name.slice(0, 2).toUpperCase()}</h3>
+                  </Link>
+                  <div className="topic-title">
+                    <h2>{item.name.toUpperCase()}</h2>
                   </div>
-                  <h2>{item.name.toUpperCase()}</h2>
                 </div>
               ))}
           </div>
               <ChatbotContainer />
         </div>
-        <div className="scroll-indication">
-          <i class="fas fa-angle-double-down" />
-        </div>
-      </div>
     </Fragment>
   )
 }
 
-export default CategorieList;
+export default Main;
