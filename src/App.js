@@ -7,6 +7,9 @@ import Category from './components/Category';
 import FicheProjet from './components/FicheProjet';
 import Loader from './components/Loader';
 
+import Calendar from './components/Calendar';
+import Formation from './components/Formation';
+
 import './styles/app.scss';
 
 function App() {
@@ -31,6 +34,8 @@ function App() {
           <Route exact path="/" component={Main}/>
           <Route path='/category' component={Category} />
           <Route path='/project' component={FicheProjet} />
+          <Route path='/calendar' component={Calendar} />
+          <Route path='/project' component={Formation} />
       </Switch>
       </Router>
       }

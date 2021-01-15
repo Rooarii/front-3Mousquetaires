@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
-
 
 const theme = {
   background: '#f5f8fb',
@@ -17,8 +15,6 @@ const theme = {
   userFontColor: '#4a4a4a',
   paddingLeft: '35%',
 };
-
-
 
 class Review extends Component {
   constructor(props) {
@@ -253,12 +249,12 @@ class SimpleForm extends Component {
             // },
             {
               id: '7',
-              message: 'Super! Et si on faisait la point ?',
+              message: 'Super! Et si on faisait le point ?',
               trigger: 'review',
             },
             {
               id: '8',
-              message: 'Super! Et si on faisait la point ?',
+              message: 'Super! Et si on faisait le point ?',
               trigger: 'review',
             },
             {
