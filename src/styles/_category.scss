@@ -2,36 +2,32 @@
   display: flex;
   padding-right: 20rem;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   flex-wrap: wrap;
 
-  h1{
+  h1 {
     font-size: 10rem;
     padding: 0;
-  margin-right:20%;
-  margin-top: 0%;
-  background: white;
+    margin-right: 20%;
+    margin-top: 0%;
+    background: white;
   }
 
-  img{
+  img {
     border-radius: 50%;
   }
 }
 
-
-.category-main{
-
-  h1{
-
-  font-size: 5rem;
+.category-main {
+  h1 {
+    font-size: 5rem;
   }
 
-  img{
+  img {
     width: 25rem;
     height: auto;
   }
 }
-
 
 /* 
 .card-wrap {

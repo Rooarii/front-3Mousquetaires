@@ -4,7 +4,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-const CategoryMainPage = () => {
+const Category = () => {
   return (
     <>
       <div className="header">
@@ -49,4 +49,4 @@ const CategoryMainPage = () => {
   );
 };
 
-export default CategoryMainPage;
+export default Category;

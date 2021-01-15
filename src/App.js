@@ -1,13 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import CategorieList from './components/CategorieList'
-import Navbar from './components/Navbar'
-import CategoryMainPage from './components/CategoryMainPage';
-// import ChatBot from './components/Chatbot';
+import Main from './components/Main';
+import Navbar from './components/Navbar';
+import Category from './components/Category';
 import FicheProjet from './components/FicheProjet';
 import Loader from './components/Loader';
-// import ChatbotContainer from './components/ChatbotContainer';
 
 import './styles/app.scss';
 
@@ -27,18 +25,12 @@ function App() {
         <div className="App">
           <header className="App-header">
             <Navbar />
-            {/* <Link to="/"><h1>Home</h1></Link> */}
           </header>
-            <div className="sticky">
-              {/* <ChatBot className="chatbot" /> */}
-              {/* <ChatbotContainer /> */}
-            </div>    
         </div>
         <Switch>
-          <Route exact path="/" component={CategorieList}/>
-          <Route path='/category' component={CategoryMainPage} />
+          <Route exact path="/" component={Main}/>
+          <Route path='/category' component={Category} />
           <Route path='/project' component={FicheProjet} />
-          {/* <Route path='/formation' component={FicheFormation} /> */}
       </Switch>
       </Router>
       }
